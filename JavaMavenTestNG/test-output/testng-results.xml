@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-11-10T18:54:30 CST" name="Suite" finished-at="2024-11-10T18:54:30 CST" duration-ms="88">
+    <groups>
+    </groups>
+    <test started-at="2024-11-10T18:54:30 CST" name="Test1" finished-at="2024-11-10T18:54:30 CST" duration-ms="88">
+      <class name="JavaMavenTestNG.JavaMavenTestNG.NewTest">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@67080771]" started-at="2024-11-10T18:54:30 CST" name="beforeClass" finished-at="2024-11-10T18:54:30 CST" duration-ms="10" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@67080771]" started-at="2024-11-10T18:54:30 CST" name="beforeMethod" finished-at="2024-11-10T18:54:30 CST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="test1()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@67080771]" started-at="2024-11-10T18:54:30 CST" name="test1" finished-at="2024-11-10T18:54:30 CST" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test1 -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@67080771]" started-at="2024-11-10T18:54:30 CST" name="afterMethod" finished-at="2024-11-10T18:54:30 CST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@67080771]" started-at="2024-11-10T18:54:30 CST" name="beforeMethod" finished-at="2024-11-10T18:54:30 CST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="test2()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@67080771]" started-at="2024-11-10T18:54:30 CST" name="test2" finished-at="2024-11-10T18:54:30 CST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@67080771]" started-at="2024-11-10T18:54:30 CST" name="afterMethod" finished-at="2024-11-10T18:54:30 CST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@67080771]" started-at="2024-11-10T18:54:30 CST" name="beforeMethod" finished-at="2024-11-10T18:54:30 CST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="test3()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@67080771]" started-at="2024-11-10T18:54:30 CST" name="test3" finished-at="2024-11-10T18:54:30 CST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test3 -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@67080771]" started-at="2024-11-10T18:54:30 CST" name="afterMethod" finished-at="2024-11-10T18:54:30 CST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@67080771]" started-at="2024-11-10T18:54:30 CST" name="afterClass" finished-at="2024-11-10T18:54:30 CST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- JavaMavenTestNG.JavaMavenTestNG.NewTest -->
+    </test> <!-- Test1 -->
+  </suite> <!-- Suite -->
+</testng-results>
