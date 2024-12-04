@@ -49,8 +49,8 @@ public class Test1 {
 		ChromeOptions ops = new ChromeOptions();
 		ops.addArguments("--disable-notifications");
 		// System.setProperty("webdriver.chrome.driver", "./lib/chromedriver");
-		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\pvenkatarajan\\Downloads\\chromedriver-win64\\chromedriver.exe");
+		//System.setProperty("webdriver.chrome.driver", "C:\\Users\\pvenkatarajan\\Downloads\\chromedriver-win64\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "src/chromedriver.exe");
 		driver = new ChromeDriver(ops);
 		context.setAttribute("driver", driver);
 
