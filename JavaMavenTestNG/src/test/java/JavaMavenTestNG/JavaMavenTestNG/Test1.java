@@ -42,6 +42,7 @@ public class Test1 {
 	@BeforeClass(alwaysRun = true)
 	public void setUp(ITestContext context) throws Exception {
 
+		//WebDriverManager.chromedriver().driverVersion("131.0.6778.87").setup();
 		//WebDriverManager.chromedriver().clearResolutionCache().setup();
 		//WebDriverManager.chromedriver().setup();
 		// ChromeOptions option = new ChromeOptions();
@@ -49,11 +50,11 @@ public class Test1 {
 
 		ChromeOptions ops = new ChromeOptions();
 		ops.addArguments("--disable-notifications");
-		/*
-		ops.addArguments("--headless"); // Run in headless mode
+		
+		ops.addArguments("--headless"); // headless mode
 		ops.addArguments("--disable-gpu"); // Disable GPU acceleration for headless mode
-		ops.addArguments("--no-sandbox"); // Important for headless mode in CI/CD environments
-	*/
+		ops.addArguments("--no-sandbox"); // for headless mode in CI/CD environments
+	
 		// System.setProperty("webdriver.chrome.driver", "./lib/chromedriver");
 		
 		//System.setProperty("webdriver.chrome.driver", "C:\\Users\\pvenkatarajan\\Downloads\\chromedriver-win64\\chromedriver.exe");
@@ -122,7 +123,7 @@ public class Test1 {
 		 * driver.switchTo().window(w1); // THROUGN OKTA END
 		 */
 
-		Thread.sleep(40000);
+		Thread.sleep(20000);
 		waitForPageToLoad(driver);
 		System.out.println("Waiting for page to fully load.");
 		Thread.sleep(2000);
