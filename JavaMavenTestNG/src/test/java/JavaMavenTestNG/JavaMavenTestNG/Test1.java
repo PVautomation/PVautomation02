@@ -50,11 +50,11 @@ public class Test1 {
 
 		ChromeOptions ops = new ChromeOptions();
 		ops.addArguments("--disable-notifications");
-		
+		/*
 		ops.addArguments("--headless"); // headless mode
 		ops.addArguments("--disable-gpu"); // Disable GPU acceleration for headless mode
 		ops.addArguments("--no-sandbox"); // for headless mode in CI/CD environments
-	
+	*/
 		// System.setProperty("webdriver.chrome.driver", "./lib/chromedriver");
 		
 		//System.setProperty("webdriver.chrome.driver", "C:\\Users\\pvenkatarajan\\Downloads\\chromedriver-win64\\chromedriver.exe");
@@ -80,15 +80,21 @@ public class Test1 {
 
 		// through direct crm site
 		driver.get("https://republicfinance--qa.sandbox.my.salesforce.com/");
+		Thread.sleep(20000);
+		System.out.println("svc acct getURL done");
 		// ERROR: Caught exception [ERROR: Unsupported command [windowMaximize | | ]]
 		driver.findElement(By.id("username")).click();
 		driver.findElement(By.id("username")).clear();
 		driver.findElement(By.id("username")).sendKeys("svcQSETA@republicfinance.com.qa");
+		Thread.sleep(5000);
+		System.out.println("svc acct uid done");
 		driver.findElement(By.id("password")).click();
 		driver.findElement(By.id("password")).clear();
 		driver.findElement(By.id("password")).sendKeys("-tEp66BWR#F#P*");
 		Thread.sleep(8000);
+		System.out.println("svc acct pwd done");
 		driver.findElement(By.id("Login")).click();
+		System.out.println("svc acct login click done");
 		// Thread.sleep(8000);
 
 		/*
@@ -241,6 +247,7 @@ public class Test1 {
 			((JavascriptExecutor) driver).executeScript("arguments[0].click();",
 					driver.findElement(By.xpath("//*[@title= 'Branch Operations']")));
 			Thread.sleep(3000);
+			System.out.println("clicked on branch operations");
 		} catch (Exception e) {
 			// Assert.assertTrue(false, "Test fail");
 			System.out.println("unable to click on branch operations");
@@ -443,7 +450,7 @@ public class Test1 {
 		
 		
 		try {
-			WebElement element3 = driver.findElement(By.xpath("(//omnistudio-flex-action[contains(@class, 'flexActionElement')]//a[contains(@class, 'slds-action_item')])[68]"));
+			WebElement element3 = driver.findElement(By.xpath("(//omnistudio-flex-action[contains(@class, 'flexActionElement')]//a[contains(@class, 'slds-action_item')])[70]"));
 			//WebElement element3 = driver.findElement(By.xpath("(//omnistudio-flex-action[contains(@class, 'flexActionElement')]//a[contains(@class, 'slds-action_item')])[15]"));		
 			
 			WebDriverWait wait3 = new WebDriverWait(driver, Duration.ofSeconds(40));
@@ -872,7 +879,7 @@ public class Test1 {
 			 * System.out.println("Waiting for page to fully load.");
 			 * js.executeScript("window.scroll(0,0);");
 			 */
-			Thread.sleep(70000);
+			Thread.sleep(50000);
 			System.out.println("test5 sleep completed");
 			waitForPageToLoad(driver);
 			System.out.println("test5 load completed");
@@ -1582,39 +1589,40 @@ public class Test1 {
 			  
 			  for (int i = 0; i < 4; i++) {
 			  System.out.println("entered into crmTest8 - next checkbox loop number" +i);
-			  WebElement checkbox =
-			  wait.until(ExpectedConditions.elementToBeClickable(By.xpath(
-			  "(//input[@type='checkbox'])[6]")));
-			  System.out.println("entered into crmTest8 - chkbox wait completed");
-			  Thread.sleep(8000); scrollToElement(driver, checkbox);
-			  System.out.println("entered into crmTest8 - chkbox scroll completed");
-			  Thread.sleep(8000); 
+			  //WebElement checkbox = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//input[@type='checkbox'])[6]")));
+			  //System.out.println("entered into crmTest8 - chkbox wait completed");
+			  //Thread.sleep(8000); 
+			  //scrollToElement(driver, checkbox);
+			  //System.out.println("entered into crmTest8 - chkbox scroll completed");
+			  //Thread.sleep(8000); 
 			  // js.executeScript("arguments[0].click();", checkbox);
 			  //checkbox.click(); Thread.sleep(8000);
 			  
-			  WebElement nextButton =
-			  wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[text()='Next']"))); 
+			  WebElement nextButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[text()='Next']"))); 
 			  //scrollToElement(driver, nextButton);
 			  //nextButton.click(); 
 			  //Thread.sleep(8000); 
 			  //---
 			  System.out.println("entered into crmTest8 - next wait completed");
-			  Thread.sleep(8000); scrollToElement(driver, nextButton);
+			  Thread.sleep(8000); 
+			  scrollToElement(driver, nextButton);
 			  System.out.println("entered into crmTest8 - next scroll completed");
-			  Thread.sleep(8000); js.executeScript("arguments[0].click();", nextButton);
+			  Thread.sleep(8000); 
+			  js.executeScript("arguments[0].click();", nextButton);
 			  //checkbox.click(); 
 			  Thread.sleep(8000); 
 			  }
 			  System.out.println("entered into crmTest8 - next checkbox 4 loop completed");
 			  
-			  Thread.sleep(2000); WebElement saveButton =
-			  wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[text()='Save']"))); 
+			  Thread.sleep(2000); 
+			  WebElement saveButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[text()='Save']"))); 
 			  Thread.sleep(8000);
 			  System.out.println("entered into crmTest8 - save wait completed");
 			  scrollToElement(driver, saveButton); 
 			  Thread.sleep(15000);
 			  System.out.println("entered into crmTest8 - save scroll completed");
-			  js.executeScript("arguments[0].click();", saveButton); Thread.sleep(15000);
+			  js.executeScript("arguments[0].click();", saveButton); 
+			  Thread.sleep(15000);
 			  System.out.println("entered into crmTest8 - save click completed");
 			  // 77777777777777
 			  Thread.sleep(2000); waitForPageToLoad(driver); System.out.
@@ -1734,7 +1742,7 @@ public class Test1 {
 			  System.out.println(" beneficiary added"); 
 			  Thread.sleep(5000);
 			  
-			  
+			  /*
 			  try {
 				  System.out.println("came into addReference try block");
 			  WebElement addReferenceButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text()='Add Reference']"))); 
@@ -1786,6 +1794,7 @@ public class Test1 {
 			  catch(Exception e)
 			  {System.out.println("came into addReference catch block - Need to add existing reference steps in catch");
 			  Thread.sleep(20000);}
+			  */
 			  
 					} catch (InterruptedException e) {
 						e.printStackTrace();
