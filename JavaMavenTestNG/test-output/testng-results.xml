@@ -23,12 +23,12 @@
       <![CDATA[<a href='C:\Users\pvenkatarajan\GIT2\PVautomation02\JavaMavenTestNG/screenshots/crmTest10.png' target='_blank'>Screenshot</a>]]>
     </line>
   </reporter-output>
-  <suite started-at="2024-12-04T11:17:15 CST" name="Suite" finished-at="2024-12-04T11:29:31 CST" duration-ms="736760">
+  <suite started-at="2024-12-04T17:15:59 CST" name="Suite" finished-at="2024-12-04T17:27:37 CST" duration-ms="697933">
     <groups>
     </groups>
-    <test started-at="2024-12-04T11:17:15 CST" name="Test" finished-at="2024-12-04T11:29:31 CST" duration-ms="736760">
+    <test started-at="2024-12-04T17:15:59 CST" name="Test" finished-at="2024-12-04T17:27:37 CST" duration-ms="697933">
       <class name="JavaMavenTestNG.JavaMavenTestNG.NewTest">
-        <test-method is-config="true" signature="setUp(org.testng.ITestContext)[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@52b1beb6]" started-at="2024-12-04T11:17:15 CST" name="setUp" finished-at="2024-12-04T11:17:19 CST" duration-ms="4161" status="PASS">
+        <test-method is-config="true" signature="setUp(org.testng.ITestContext)[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@52b1beb6]" started-at="2024-12-04T17:15:59 CST" name="setUp" finished-at="2024-12-04T17:16:02 CST" duration-ms="3201" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -39,66 +39,66 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@52b1beb6]" started-at="2024-12-04T11:17:19 CST" name="beforeClass" finished-at="2024-12-04T11:17:19 CST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@52b1beb6]" started-at="2024-12-04T17:16:02 CST" name="beforeClass" finished-at="2024-12-04T17:16:02 CST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@52b1beb6]" started-at="2024-12-04T11:17:19 CST" name="beforeMethod" finished-at="2024-12-04T11:17:19 CST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@52b1beb6]" started-at="2024-12-04T17:16:02 CST" name="beforeMethod" finished-at="2024-12-04T17:16:02 CST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="test1()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@52b1beb6]" started-at="2024-12-04T11:17:19 CST" name="test1" finished-at="2024-12-04T11:17:19 CST" duration-ms="7" status="PASS">
+        <test-method signature="test1()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@52b1beb6]" started-at="2024-12-04T17:16:02 CST" name="test1" finished-at="2024-12-04T17:16:02 CST" duration-ms="4" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[<a href='C:\Users\pvenkatarajan\GIT2\PVautomation02\JavaMavenTestNG/screenshots/test1.png' target='_blank'>Screenshot</a>]]>
             </line>
           </reporter-output>
         </test-method> <!-- test1 -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@52b1beb6]" started-at="2024-12-04T11:17:19 CST" name="afterMethod" finished-at="2024-12-04T11:17:19 CST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@52b1beb6]" started-at="2024-12-04T17:16:02 CST" name="afterMethod" finished-at="2024-12-04T17:16:02 CST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method signature="test2()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@52b1beb6]" started-at="2024-12-04T11:17:19 CST" name="test2" finished-at="2024-12-04T11:17:19 CST" duration-ms="4" status="PASS">
+        <test-method signature="test2()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@52b1beb6]" started-at="2024-12-04T17:16:02 CST" name="test2" finished-at="2024-12-04T17:16:02 CST" duration-ms="3" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[<a href='C:\Users\pvenkatarajan\GIT2\PVautomation02\JavaMavenTestNG/screenshots/test2.png' target='_blank'>Screenshot</a>]]>
             </line>
           </reporter-output>
         </test-method> <!-- test2 -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@52b1beb6]" started-at="2024-12-04T11:17:19 CST" name="beforeMethod" finished-at="2024-12-04T11:17:19 CST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@52b1beb6]" started-at="2024-12-04T17:16:02 CST" name="beforeMethod" finished-at="2024-12-04T17:16:02 CST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@52b1beb6]" started-at="2024-12-04T11:17:19 CST" name="afterMethod" finished-at="2024-12-04T11:17:19 CST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@52b1beb6]" started-at="2024-12-04T11:17:19 CST" name="beforeMethod" finished-at="2024-12-04T11:17:19 CST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="test3()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@52b1beb6]" started-at="2024-12-04T11:17:19 CST" name="test3" finished-at="2024-12-04T11:17:19 CST" duration-ms="1" status="PASS">
+        <test-method signature="test3()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@52b1beb6]" started-at="2024-12-04T17:16:02 CST" name="test3" finished-at="2024-12-04T17:16:02 CST" duration-ms="1" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[<a href='C:\Users\pvenkatarajan\GIT2\PVautomation02\JavaMavenTestNG/screenshots/test3.png' target='_blank'>Screenshot</a>]]>
             </line>
           </reporter-output>
         </test-method> <!-- test3 -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@52b1beb6]" started-at="2024-12-04T11:17:19 CST" name="afterMethod" finished-at="2024-12-04T11:17:19 CST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@52b1beb6]" started-at="2024-12-04T17:16:02 CST" name="afterMethod" finished-at="2024-12-04T17:16:02 CST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@52b1beb6]" started-at="2024-12-04T11:17:19 CST" name="afterClass" finished-at="2024-12-04T11:17:19 CST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@52b1beb6]" started-at="2024-12-04T17:16:02 CST" name="beforeMethod" finished-at="2024-12-04T17:16:02 CST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- afterClass -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@52b1beb6]" started-at="2024-12-04T11:17:19 CST" name="tearDown" finished-at="2024-12-04T11:17:20 CST" duration-ms="830" status="PASS">
+        </test-method> <!-- beforeMethod -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@52b1beb6]" started-at="2024-12-04T17:16:02 CST" name="afterMethod" finished-at="2024-12-04T17:16:02 CST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@52b1beb6]" started-at="2024-12-04T17:16:02 CST" name="tearDown" finished-at="2024-12-04T17:16:03 CST" duration-ms="659" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@52b1beb6]" started-at="2024-12-04T17:16:02 CST" name="afterClass" finished-at="2024-12-04T17:16:02 CST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
       </class> <!-- JavaMavenTestNG.JavaMavenTestNG.NewTest -->
       <class name="JavaMavenTestNG.JavaMavenTestNG.Test1">
-        <test-method is-config="true" signature="setUp(org.testng.ITestContext)[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.Test1@3f6f6701]" started-at="2024-12-04T11:17:20 CST" name="setUp" finished-at="2024-12-04T11:17:22 CST" duration-ms="2216" status="PASS">
+        <test-method is-config="true" signature="setUp(org.testng.ITestContext)[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.Test1@3f6f6701]" started-at="2024-12-04T17:16:03 CST" name="setUp" finished-at="2024-12-04T17:16:05 CST" duration-ms="2187" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -109,35 +109,35 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="crmTest1()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.Test1@3f6f6701]" started-at="2024-12-04T11:17:22 CST" name="crmTest1" finished-at="2024-12-04T11:18:07 CST" duration-ms="44368" status="PASS">
+        <test-method signature="crmTest1()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.Test1@3f6f6701]" started-at="2024-12-04T17:16:05 CST" name="crmTest1" finished-at="2024-12-04T17:16:50 CST" duration-ms="44623" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[<a href='C:\Users\pvenkatarajan\GIT2\PVautomation02\JavaMavenTestNG/screenshots/crmTest1.png' target='_blank'>Screenshot</a>]]>
             </line>
           </reporter-output>
         </test-method> <!-- crmTest1 -->
-        <test-method signature="crmTest2()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.Test1@3f6f6701]" started-at="2024-12-04T11:18:07 CST" name="crmTest2" finished-at="2024-12-04T11:19:52 CST" duration-ms="105280" status="PASS">
+        <test-method signature="crmTest2()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.Test1@3f6f6701]" started-at="2024-12-04T17:16:50 CST" name="crmTest2" finished-at="2024-12-04T17:18:37 CST" duration-ms="106841" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[<a href='C:\Users\pvenkatarajan\GIT2\PVautomation02\JavaMavenTestNG/screenshots/crmTest2.png' target='_blank'>Screenshot</a>]]>
             </line>
           </reporter-output>
         </test-method> <!-- crmTest2 -->
-        <test-method signature="crmTest9()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.Test1@3f6f6701]" started-at="2024-12-04T11:19:53 CST" name="crmTest9" finished-at="2024-12-04T11:22:56 CST" duration-ms="183473" status="PASS">
+        <test-method signature="crmTest9()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.Test1@3f6f6701]" started-at="2024-12-04T17:18:37 CST" name="crmTest9" finished-at="2024-12-04T17:21:40 CST" duration-ms="182819" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[<a href='C:\Users\pvenkatarajan\GIT2\PVautomation02\JavaMavenTestNG/screenshots/crmTest9.png' target='_blank'>Screenshot</a>]]>
             </line>
           </reporter-output>
         </test-method> <!-- crmTest9 -->
-        <test-method signature="crmTest10()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.Test1@3f6f6701]" started-at="2024-12-04T11:22:56 CST" name="crmTest10" finished-at="2024-12-04T11:29:30 CST" duration-ms="394085" status="PASS">
+        <test-method signature="crmTest10()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.Test1@3f6f6701]" started-at="2024-12-04T17:21:40 CST" name="crmTest10" finished-at="2024-12-04T17:27:34 CST" duration-ms="354071" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[<a href='C:\Users\pvenkatarajan\GIT2\PVautomation02\JavaMavenTestNG/screenshots/crmTest10.png' target='_blank'>Screenshot</a>]]>
             </line>
           </reporter-output>
         </test-method> <!-- crmTest10 -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.Test1@3f6f6701]" started-at="2024-12-04T11:29:30 CST" name="tearDown" finished-at="2024-12-04T11:29:31 CST" duration-ms="864" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.Test1@3f6f6701]" started-at="2024-12-04T17:27:35 CST" name="tearDown" finished-at="2024-12-04T17:27:37 CST" duration-ms="1919" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

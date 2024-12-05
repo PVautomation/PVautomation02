@@ -42,20 +42,23 @@ public class Test1 {
 	@BeforeClass(alwaysRun = true)
 	public void setUp(ITestContext context) throws Exception {
 
-		WebDriverManager.chromedriver().setup();
+		//WebDriverManager.chromedriver().clearResolutionCache().setup();
+		//WebDriverManager.chromedriver().setup();
 		// ChromeOptions option = new ChromeOptions();
 		// option.addArguments("--headless");
 
 		ChromeOptions ops = new ChromeOptions();
 		ops.addArguments("--disable-notifications");
-		
+		/*
 		ops.addArguments("--headless"); // Run in headless mode
 		ops.addArguments("--disable-gpu"); // Disable GPU acceleration for headless mode
 		ops.addArguments("--no-sandbox"); // Important for headless mode in CI/CD environments
-	
+	*/
 		// System.setProperty("webdriver.chrome.driver", "./lib/chromedriver");
+		
 		//System.setProperty("webdriver.chrome.driver", "C:\\Users\\pvenkatarajan\\Downloads\\chromedriver-win64\\chromedriver.exe");
 		System.setProperty("webdriver.chrome.driver", "src/chromedriver.exe");
+		
 		driver = new ChromeDriver(ops);
 		context.setAttribute("driver", driver);
 
@@ -426,7 +429,12 @@ public class Test1 {
 		System.out.println("Waiting for page to fully load.");
 		js.executeScript("window.scroll(0,0);");
 		Thread.sleep(3000);
-
+	}
+	
+	
+	
+	@Test
+	public void crmTest002() throws Exception {
 		System.out.println("Waiting for page to fully load. - WAITING FOR 'VIEW' TO JUMP TO APPROVED PAGE - before try");
 		
 		

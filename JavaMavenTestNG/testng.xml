@@ -26,6 +26,7 @@
       <methods>
         <include name="crmTest1" />
 <include name="crmTest2" /> 
+<include name="crmTest002" />
 <include name="crmTest9" />
 <include name="crmTest10" />
       </methods>
@@ -60,6 +61,7 @@
 <!--
 <include name="crmTest1" />
 <include name="crmTest2" /> 
+<include name="crmTest002" />
 <include name="crmTest8" />
 <include name="crmTest9" />
 <include name="crmTest10" />
@@ -69,6 +71,7 @@
 <!--
 <include name="crmTest1" />
 <include name="crmTest2" /> 
+<include name="crmTest002" />
 <include name="crmTest9" />
 <include name="crmTest10" />
 -->
