@@ -12,6 +12,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
+import JavaMavenTestNG.JavaMavenTestNG.Test1;
 
 public class NewTest extends Test1  {
   @Test
@@ -23,6 +24,7 @@ public class NewTest extends Test1  {
   @Test
   public void test2() {
 	  System.out.println("test2");
+	 
 	  Assert.assertTrue(true, "Test pass");
   }
   

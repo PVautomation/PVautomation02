@@ -122,7 +122,10 @@ public class Test1 {
 		 * driver.switchTo().window(w1); // THROUGN OKTA END
 		 */
 
-		Thread.sleep(20000);
+		Thread.sleep(40000);
+		waitForPageToLoad(driver);
+		System.out.println("Waiting for page to fully load.");
+		Thread.sleep(2000);
 		// driver.findElement(By.xpath("//*[@id=\"oneHeader\"]/div[2]/span/div[2]/ul/li[2]")).click();
 
 		// ((JavascriptExecutor)
