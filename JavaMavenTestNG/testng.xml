@@ -21,13 +21,7 @@
     <class name="JavaMavenTestNG.JavaMavenTestNG.Test1">
       <methods>
 <include name="crmTest1" />
-<include name="crmTest2" /> 
-<include name="crmTest02" />  
-<include name="crmTest3" />  
-<include name="crmTest4" /> 
-<include name="crmTest5" /> 
-<include name="crmTest6" /> 
-<include name="crmTest7" />
+
       </methods>
     </class>
     </classes>

@@ -50,11 +50,11 @@ public class Test1 {
 
 		ChromeOptions ops = new ChromeOptions();
 		ops.addArguments("--disable-notifications");
-		/*
+		
 		ops.addArguments("--headless"); // headless mode
 		ops.addArguments("--disable-gpu"); // Disable GPU acceleration for headless mode
 		ops.addArguments("--no-sandbox"); // for headless mode in CI/CD environments
-	*/
+	
 		// System.setProperty("webdriver.chrome.driver", "./lib/chromedriver");
 		
 		//System.setProperty("webdriver.chrome.driver", "C:\\Users\\pvenkatarajan\\Downloads\\chromedriver-win64\\chromedriver.exe");
