@@ -54,7 +54,7 @@ public class Test1 {
 		ops.addArguments("--headless"); // headless mode
 		ops.addArguments("--disable-gpu"); // Disable GPU acceleration for headless mode
 		ops.addArguments("--no-sandbox"); // for headless mode in CI/CD environments
-	
+		ops.addArguments("--window-size=1920x1080");
 		// System.setProperty("webdriver.chrome.driver", "./lib/chromedriver");
 		
 		//System.setProperty("webdriver.chrome.driver", "C:\\Users\\pvenkatarajan\\Downloads\\chromedriver-win64\\chromedriver.exe");

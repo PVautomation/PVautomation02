@@ -102,6 +102,8 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M4</version>
                 <configuration>
+<!-- reports are generated in the test-output directory -->
+    <reportsDirectory>${project.basedir}/test-output</reportsDirectory>
                     <suiteXmlFiles>
                         <suiteXmlFile>testng.xml</suiteXmlFile>
                     </suiteXmlFiles>
