@@ -5,11 +5,31 @@
     <classes>
       <class name="JavaMavenTestNG.JavaMavenTestNG.Test1">
         <methods>
+          <include name="crmTest3"/>
+          <include name="crmTest02"/>
+          <include name="crmTest4"/>
           <include name="tearDown"/>
+          <include name="crmTest6"/>
+          <include name="crmTest5"/>
+          <include name="crmTest7"/>
           <include name="setUp"/>
-          <include name="crmTest10"/>
+          <include name="crmTest2"/>
+          <include name="crmTest1"/>
         </methods>
       </class> <!-- JavaMavenTestNG.JavaMavenTestNG.Test1 -->
+      <class name="JavaMavenTestNG.JavaMavenTestNG.NewTest">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="test2"/>
+          <include name="test3"/>
+          <include name="beforeMethod"/>
+          <include name="test1"/>
+          <include name="tearDown"/>
+          <include name="afterClass"/>
+          <include name="afterMethod"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- JavaMavenTestNG.JavaMavenTestNG.NewTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
