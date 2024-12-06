@@ -40,8 +40,8 @@ public class Test1 {
 	@BeforeClass(alwaysRun = true)
 	public void setUp(ITestContext context) throws Exception {
 
-		//WebDriverManager.chromedriver().driverVersion("131.0.6778.87").setup();
-		WebDriverManager.chromedriver().clearResolutionCache().setup();
+		WebDriverManager.chromedriver().driverVersion("131.0.6778.85").setup();
+		//WebDriverManager.chromedriver().clearResolutionCache().setup();
 		//WebDriverManager.chromedriver().setup();
 		// ChromeOptions option = new ChromeOptions();
 		// option.addArguments("--headless");
