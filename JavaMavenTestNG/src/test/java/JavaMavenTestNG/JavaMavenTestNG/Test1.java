@@ -40,7 +40,7 @@ public class Test1 {
 	@BeforeClass(alwaysRun = true)
 	public void setUp(ITestContext context) throws Exception {
 
-		WebDriverManager.chromedriver().driverVersion("131.0.6778.85").setup();
+		//WebDriverManager.chromedriver().driverVersion("131.0.6778.85").setup();
 		//WebDriverManager.chromedriver().clearResolutionCache().setup();
 		//WebDriverManager.chromedriver().setup();
 		// ChromeOptions option = new ChromeOptions();
@@ -57,7 +57,7 @@ public class Test1 {
 		// System.setProperty("webdriver.chrome.driver", "./lib/chromedriver");
 		
 		//System.setProperty("webdriver.chrome.driver", "C:\\Users\\pvenkatarajan\\Downloads\\chromedriver-win64\\chromedriver.exe");
-		//System.setProperty("webdriver.chrome.driver", "src/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "src/chromedriver.exe");
 		
 		driver = new ChromeDriver(ops);
 		context.setAttribute("driver", driver);
