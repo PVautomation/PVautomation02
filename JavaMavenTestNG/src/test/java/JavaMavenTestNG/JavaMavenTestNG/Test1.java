@@ -28,8 +28,6 @@ import java.io.File;
 import java.sql.Time;
 import java.time.Duration;
 import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.JavascriptExecutor;
 
 public class Test1 {
 	public WebDriver driver;
@@ -43,7 +41,7 @@ public class Test1 {
 	public void setUp(ITestContext context) throws Exception {
 
 		//WebDriverManager.chromedriver().driverVersion("131.0.6778.87").setup();
-		//WebDriverManager.chromedriver().clearResolutionCache().setup();
+		WebDriverManager.chromedriver().clearResolutionCache().setup();
 		//WebDriverManager.chromedriver().setup();
 		// ChromeOptions option = new ChromeOptions();
 		// option.addArguments("--headless");
@@ -55,10 +53,11 @@ public class Test1 {
 		ops.addArguments("--disable-gpu"); // Disable GPU acceleration for headless mode
 		ops.addArguments("--no-sandbox"); // for headless mode in CI/CD environments
 		ops.addArguments("--window-size=1920x1080");
+		ops.addArguments("--disable-dev-shm-usage");
 		// System.setProperty("webdriver.chrome.driver", "./lib/chromedriver");
 		
 		//System.setProperty("webdriver.chrome.driver", "C:\\Users\\pvenkatarajan\\Downloads\\chromedriver-win64\\chromedriver.exe");
-		System.setProperty("webdriver.chrome.driver", "src/chromedriver.exe");
+		//System.setProperty("webdriver.chrome.driver", "src/chromedriver.exe");
 		
 		driver = new ChromeDriver(ops);
 		context.setAttribute("driver", driver);
@@ -102,8 +101,30 @@ public class Test1 {
 		js0.executeScript("arguments[0].click();", login);
 		System.out.println("svc acct login click done");
 		Thread.sleep(5000);
+		
+		//-----
+		  Thread.sleep(3000);
+		  System.out.println("before screeshot2");
+		  File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		//String path = System.getProperty("user.dir") + "/screenshot.png"; // Save relative to the project root
+		String path = System.getenv("Build.ArtifactStagingDirectory") + "/screenshot2.png";
+		FileUtils.copyFile(screenshot, new File(path));
+		Thread.sleep(3000);
+		  System.out.println("after screenshot2");
+		//-----
+		
 		} catch (Exception e) {
 			System.out.println("CRM-TEST1 LOGIN DID NOT HAPPEN");
+			//-----
+			  Thread.sleep(3000);
+			  System.out.println("before screenshot3");
+			  File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+			//String path = System.getProperty("user.dir") + "/screenshot.png"; // Save relative to the project root
+			String path = System.getenv("Build.ArtifactStagingDirectory") + "/screenshot3.png";
+			FileUtils.copyFile(screenshot, new File(path));
+			Thread.sleep(3000);
+			  System.out.println(" after screenshot3");
+			//-----
 		}
 
 		
@@ -142,6 +163,16 @@ public class Test1 {
 		Thread.sleep(20000);
 		waitForPageToLoad(driver);
 		System.out.println("Waiting for page to fully load.");
+		//-----
+		  Thread.sleep(3000);
+		  System.out.println("before screenshot4");
+		  File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		//String path = System.getProperty("user.dir") + "/screenshot.png"; // Save relative to the project root
+		String path = System.getenv("Build.ArtifactStagingDirectory") + "/screenshot4.png";
+		FileUtils.copyFile(screenshot, new File(path));
+		Thread.sleep(3000);
+		  System.out.println(" after screenshot4");
+		//-----
 		Thread.sleep(2000);
 		// driver.findElement(By.xpath("//*[@id=\"oneHeader\"]/div[2]/span/div[2]/ul/li[2]")).click();
 

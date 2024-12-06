@@ -1,6 +1,12 @@
 package JavaMavenTestNG.JavaMavenTestNG;
 
+import java.io.File;
+import java.io.IOException;
+
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -18,7 +24,7 @@ import JavaMavenTestNG.JavaMavenTestNG.Test1;
 
 public class NewTest extends Test1  {
   @Test
-  public void test1() throws InterruptedException {
+  public void test1() throws InterruptedException, IOException {
 	  driver.get("https://secure-test.republicfinance.com/apps/account/login");
 	  WebElement username=driver.findElement(By.id("username"));
 	  WebElement password=driver.findElement(By.id("password"));
@@ -32,7 +38,14 @@ public class NewTest extends Test1  {
 	  {System.out.println("login confirmed");}
 	  System.out.println("test1 outside if condition");
 	  Assert.assertTrue(expected.isDisplayed());
+	  Thread.sleep(3000);
 	  System.out.println("test1 outside assert condition");
+	  File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+	//String path = System.getProperty("user.dir") + "/screenshot.png"; // Save relative to the project root
+	String path = System.getenv("Build.ArtifactStagingDirectory") + "/screenshot1.png";
+	FileUtils.copyFile(screenshot, new File(path));
+	Thread.sleep(3000);
+	  System.out.println("screenshot1");
 	  }
   
   @Test
