@@ -78,25 +78,35 @@ public class Test1 {
 	@Test
 	public void crmTest1() throws Exception {
 
+		try {
 		// through direct crm site
 		driver.get("https://republicfinance--qa.sandbox.my.salesforce.com/");
-		Thread.sleep(20000);
+		Thread.sleep(5000);
 		System.out.println("svc acct getURL done");
 		// ERROR: Caught exception [ERROR: Unsupported command [windowMaximize | | ]]
 		driver.findElement(By.id("username")).click();
 		driver.findElement(By.id("username")).clear();
 		driver.findElement(By.id("username")).sendKeys("svcQSETA@republicfinance.com.qa");
-		Thread.sleep(5000);
+		Thread.sleep(2000);
 		System.out.println("svc acct uid done");
 		driver.findElement(By.id("password")).click();
 		driver.findElement(By.id("password")).clear();
 		driver.findElement(By.id("password")).sendKeys("-tEp66BWR#F#P*");
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		System.out.println("svc acct pwd done");
-		driver.findElement(By.id("Login")).click();
+		WebElement login = driver.findElement(By.id("Login"));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
+		wait.until(ExpectedConditions.elementToBeClickable(login));
+		JavascriptExecutor js0 = (JavascriptExecutor) driver;
+		js0.executeScript("arguments[0].focus();", login);
+		js0.executeScript("arguments[0].click();", login);
 		System.out.println("svc acct login click done");
-		// Thread.sleep(8000);
+		Thread.sleep(5000);
+		} catch (Exception e) {
+			System.out.println("CRM-TEST1 LOGIN DID NOT HAPPEN");
+		}
 
+		
 		/*
 		 * // THROUGN OKTA START
 		 * driver.get("https://republic.okta.com/login/login.htm");
@@ -128,7 +138,7 @@ public class Test1 {
 		 * ); Thread.sleep(9000); String w1 = driver.getWindowHandle();
 		 * driver.switchTo().window(w1); // THROUGN OKTA END
 		 */
-
+		System.out.println("came outside crm login try catch");
 		Thread.sleep(20000);
 		waitForPageToLoad(driver);
 		System.out.println("Waiting for page to fully load.");
@@ -450,7 +460,7 @@ public class Test1 {
 		
 		
 		try {
-			WebElement element3 = driver.findElement(By.xpath("(//omnistudio-flex-action[contains(@class, 'flexActionElement')]//a[contains(@class, 'slds-action_item')])[70]"));
+			WebElement element3 = driver.findElement(By.xpath("(//omnistudio-flex-action[contains(@class, 'flexActionElement')]//a[contains(@class, 'slds-action_item')])[71]"));
 			//WebElement element3 = driver.findElement(By.xpath("(//omnistudio-flex-action[contains(@class, 'flexActionElement')]//a[contains(@class, 'slds-action_item')])[15]"));		
 			
 			WebDriverWait wait3 = new WebDriverWait(driver, Duration.ofSeconds(40));
@@ -1741,6 +1751,25 @@ public class Test1 {
 			  a1.sendKeys("5125011234").perform(); Thread.sleep(2000);
 			  System.out.println(" beneficiary added"); 
 			  Thread.sleep(5000);
+			  
+			  try {
+				  System.out.println("came into EXISTING addReference try block");
+				  Thread.sleep(5000);
+
+			  if(driver.findElement(By.xpath("//*[text()='We found these references, do you want to include them as current references?']")).isDisplayed())
+			  {
+				  Thread.sleep(5000);
+				  driver.findElement(By.xpath("(//omnistudio-block[contains(@data-style-id, 'state0element0block_element0block_element2')]//div[contains(@class, 'slds-col') and contains(@class, 'slds-text-align_center')])[1]")).click();
+				  Thread.sleep(5000);
+				  driver.findElement(By.xpath("(//omnistudio-block[contains(@data-style-id, 'state0element0block_element0block_element2')]//div[contains(@class, 'slds-col') and contains(@class, 'slds-text-align_center')])[2]")).click();
+				  Thread.sleep(5000);
+				  driver.findElement(By.xpath("(//omnistudio-block[contains(@data-style-id, 'state0element0block_element0block_element2')]//div[contains(@class, 'slds-col') and contains(@class, 'slds-text-align_center')])[3]")).click();
+				  Thread.sleep(5000);
+			  }}
+			  catch(Exception e)
+			  {System.out.println("came into EXISTING addReference catch block");
+			  Thread.sleep(5000);}
+			  
 			  
 			  /*
 			  try {
