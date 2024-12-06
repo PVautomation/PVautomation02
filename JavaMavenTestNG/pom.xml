@@ -96,17 +96,18 @@
         </plugin>
 
         <!-- Maven Surefire Plugin -->
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-surefire-plugin</artifactId>
-            <version>3.0.0</version> <!-- Updated version -->
-            <configuration>
-                <includes>
-                    <include>**/*[Tt]est*.java</include>  <!-- Include tests with 'Test' or 'test' in their name -->
-                </includes>
-                <argLine>-Xmx1024m</argLine> <!-- Increase JVM memory -->
-            </configuration>
-        </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.0.0-M4</version>
+                <configuration>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>testng.xml</suiteXmlFile>
+                    </suiteXmlFiles>
+                </configuration>
+            </plugin>
+           
 
         <plugin>
             <groupId>org.springframework.boot</groupId>
