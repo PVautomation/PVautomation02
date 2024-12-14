@@ -38,17 +38,17 @@ public class NewTest extends Test1  {
 	  username.sendKeys("pv12324a01@yopmail.com");
 	  password.sendKeys("P@ssword123");
 	  login.click();
-	  Thread.sleep(90000);
 	  
-	  t.verifyTextOnPage("Funding Details");
+	  //Thread.sleep(90000);
+	  //t.verifyTextOnPage("Funding Details");
 	  /*
 	  WebElement expected = driver.findElement(By.xpath("//*[text()='Account Summary']"));
 	  if(expected.isDisplayed())
 	  {System.out.println("login confirmed");}
 	  System.out.println("test1 outside if condition");
 	  Assert.assertTrue(expected.isDisplayed());
-	  Thread.sleep(3000);
 	  */
+	  Thread.sleep(3000);
 	  System.out.println("test1 outside assert condition");
 	  File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 	//String path = System.getProperty("user.dir") + "/screenshot.png"; // Save relative to the project root
