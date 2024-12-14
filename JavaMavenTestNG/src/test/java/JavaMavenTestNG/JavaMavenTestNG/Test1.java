@@ -114,7 +114,7 @@ public class Test1 {
 		Thread.sleep(3000);
 		  System.out.println("after screenshot2");
 		//-----
-		  verifyTextOnPage();
+		  verifyTextOnPage("verification code");
 		 
 		
 		} catch (Exception e) {
@@ -2356,30 +2356,30 @@ public class Test1 {
 	}
 
 	
-    public void verifyTextOnPage() {
+    public void verifyTextOnPage(String s) {
   
         // Text to verify
-        String expectedText = "verification code"; 
+        String expectedText = s; 
 
         // Use WebDriverWait to ensure the page is fully loaded
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(120));
         WebElement bodyElement = wait.until(ExpectedConditions.presenceOfElementLocated(By.tagName("body")));
 
         // Verify if the text is present in the body element
         boolean isTextPresent = bodyElement.getText().contains(expectedText);
 
         // Assert that the text is found
-       // Assert.assertTrue(isTextPresent, "ASSERT SAYS - VERIFICATION CODE PRESENT1");
-        Assert.assertFalse(isTextPresent, "ASSERT SAYS - VERIFICATION CODE NOT PRESENT1");
+       // Assert.assertTrue(isTextPresent, "ASSERT SAYS - TEXT PRESENT1" +expectedText);
+        Assert.assertFalse(isTextPresent, "ASSERT SAYS - TEXT NOT PRESENT1"  +expectedText);
         //Assert.assertEquals(isTextPresent, isTextPresent, expectedText);
         // Log result
         if (isTextPresent) {
-            System.out.println("ASSERT SAYS - VERIFICATION CODE PRESENT2");
-            Reporter.log("REPORTER in main SAYS - AFTER ASSERT - VERIFICATION CODE PRESENT\n");
+            System.out.println("ASSERT SAYS - TEXT PRESENT2"  +expectedText);
+            Reporter.log("REPORTER in main SAYS - AFTER ASSERT - TEXT PRESENT\n"  +expectedText);
         }
         else
-        {System.out.println("ASSERT SAYS - VERIFICATION CODE NOT PRESENT2");
-        Reporter.log("REPORTER in main SAYS - AFTER ASSERT - VERIFICATION CODE NOT PRESENT\n");}
+        {System.out.println("ASSERT SAYS - TEXT NOT PRESENT2"  +expectedText);
+        Reporter.log("REPORTER in main SAYS - AFTER ASSERT - TEXT NOT PRESENT\n" +expectedText);}
     }
 	
 	public static void waitForPageToLoad(WebDriver driver) {

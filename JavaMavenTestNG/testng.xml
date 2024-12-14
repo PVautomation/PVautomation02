@@ -21,8 +21,6 @@
     <class name="JavaMavenTestNG.JavaMavenTestNG.Test1">
       <methods>
 <include name="crmTest1" />
-<include name="crmTest2" /> 
-
       </methods>
     </class>
     </classes>

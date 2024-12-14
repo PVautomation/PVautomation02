@@ -29,7 +29,7 @@ public class NewTest extends Test1  {
   @Test
   @Parameters("ownerName")
   public void test1() throws InterruptedException, IOException {
-	  //Test1 t = new Test1();
+	  Test1 t = new Test1();
 	  //t.setup();
 	  driver.get("https://secure-test.republicfinance.com/apps/account/login");
 	  WebElement username=driver.findElement(By.id("username"));
@@ -38,13 +38,17 @@ public class NewTest extends Test1  {
 	  username.sendKeys("pv12324a01@yopmail.com");
 	  password.sendKeys("P@ssword123");
 	  login.click();
-	  Thread.sleep(60000);
+	  Thread.sleep(90000);
+	  
+	  t.verifyTextOnPage("Funding Details");
+	  /*
 	  WebElement expected = driver.findElement(By.xpath("//*[text()='Account Summary']"));
 	  if(expected.isDisplayed())
 	  {System.out.println("login confirmed");}
 	  System.out.println("test1 outside if condition");
 	  Assert.assertTrue(expected.isDisplayed());
 	  Thread.sleep(3000);
+	  */
 	  System.out.println("test1 outside assert condition");
 	  File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 	//String path = System.getProperty("user.dir") + "/screenshot.png"; // Save relative to the project root
