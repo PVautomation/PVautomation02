@@ -29,7 +29,7 @@ public class NewTest extends Test1  {
   @Test
   @Parameters("ownerName")
   public void test1() throws InterruptedException, IOException {
-	  Test1 t = new Test1();
+	  //Test1 t = new Test1();
 	  //t.setup();
 	  driver.get("https://secure-test.republicfinance.com/apps/account/login");
 	  WebElement username=driver.findElement(By.id("username"));
@@ -38,9 +38,10 @@ public class NewTest extends Test1  {
 	  username.sendKeys("pv12324a01@yopmail.com");
 	  password.sendKeys("P@ssword123");
 	  login.click();
-	  
-	  //Thread.sleep(90000);
-	  //t.verifyTextOnPage("Funding Details");
+	  Thread.sleep(20000);
+	  driver.navigate().refresh();
+	  Thread.sleep(50000);
+	  verifyTextOnPage("Funding Details");
 	  /*
 	  WebElement expected = driver.findElement(By.xpath("//*[text()='Account Summary']"));
 	  if(expected.isDisplayed())
