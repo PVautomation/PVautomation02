@@ -1,10 +1,10 @@
-/*
+///*
 package JavaMavenTestNG.JavaMavenTestNG;
 
 import JavaMavenTestNG.JavaMavenTestNG.Test1;
 import JavaMavenTestNG.JavaMavenTestNG.ScreenshotUtility;
-import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
+import org.openqa.selenium.WebDriver;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 import org.testng.Reporter;
@@ -25,7 +25,8 @@ public class ScreenshotListener extends Test1 implements ITestListener {
         try {
             String screenshotPath = ScreenshotUtility.captureScreenshot(driver, result.getName());
             		//captureScreenshot(driver, result.getName());
-            Reporter.log("<a href='" + screenshotPath + "' target='_blank'>Screenshot</a>");
+            Reporter.log("<a href='" + screenshotPath + "' target='_blank'>Screenshot</a>\n");
+            Reporter.log("REPORTER for fail in listner1\n");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -38,11 +39,14 @@ public class ScreenshotListener extends Test1 implements ITestListener {
 
         try {
             String screenshotPath = ScreenshotUtility.captureScreenshot(driver, result.getName());
-            Reporter.log("<a href='" + screenshotPath + "' target='_blank'>Screenshot</a>");
+            Reporter.log("\n");
+            Reporter.log("<a href='" + screenshotPath + "' target='_blank'>Screenshot</a>\n");
+            Reporter.log("\n");
+            Reporter.log("REPORTER for pass in listner1\n");
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
 }
-*/
+//*/

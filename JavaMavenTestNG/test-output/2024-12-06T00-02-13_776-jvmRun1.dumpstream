@@ -1,3 +1,0 @@
-# Created at 2024-12-06T00:02:35.369
-Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[21.131s][error][attach] failure writing result of operation jcmd to pipe \\.\pipe\javatool-449037277'.
-

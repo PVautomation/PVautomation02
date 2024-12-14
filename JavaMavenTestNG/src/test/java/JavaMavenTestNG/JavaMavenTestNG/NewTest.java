@@ -1,5 +1,7 @@
+
 package JavaMavenTestNG.JavaMavenTestNG;
 
+import JavaMavenTestNG.JavaMavenTestNG.Test1;
 import java.io.File;
 import java.io.IOException;
 
@@ -18,13 +20,17 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
-import JavaMavenTestNG.JavaMavenTestNG.Test1;
+
 
 public class NewTest extends Test1  {
   @Test
+  @Parameters("ownerName")
   public void test1() throws InterruptedException, IOException {
+	  //Test1 t = new Test1();
+	  //t.setup();
 	  driver.get("https://secure-test.republicfinance.com/apps/account/login");
 	  WebElement username=driver.findElement(By.id("username"));
 	  WebElement password=driver.findElement(By.id("password"));
@@ -49,6 +55,7 @@ public class NewTest extends Test1  {
 	  }
   
   @Test
+  @Parameters("ownerName")
   public void test2() {
 	  System.out.println("test2");
 	 
@@ -56,6 +63,7 @@ public class NewTest extends Test1  {
   }
   
   @Test
+  @Parameters("ownerName")
   public void test3() {
 	  System.out.println("test3");
 	  Assert.assertTrue(true, "Test pass");
@@ -82,3 +90,4 @@ public class NewTest extends Test1  {
   }
 
 }
+

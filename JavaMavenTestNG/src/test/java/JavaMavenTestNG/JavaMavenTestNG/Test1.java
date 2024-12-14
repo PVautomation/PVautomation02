@@ -1,7 +1,5 @@
 package JavaMavenTestNG.JavaMavenTestNG;
 
-import org.testng.annotations.Test;
-
 //import com.pv.project1.PageObjectModelClass;
 
 //import com.pv.project1.PageObjectModelClass;
@@ -15,6 +13,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.testng.Assert;
 import org.testng.ITestContext;
+import org.testng.Reporter;
 import org.testng.annotations.*;
 import static org.testng.Assert.*;
 import org.openqa.selenium.*;
@@ -29,6 +28,8 @@ import java.sql.Time;
 import java.time.Duration;
 import org.apache.commons.io.FileUtils;
 
+
+//@TestOwner("pvenkatarajan@republicfinance.com")
 public class Test1 {
 	public WebDriver driver;
 	private String baseUrl;
@@ -48,14 +49,14 @@ public class Test1 {
 
 		ChromeOptions ops = new ChromeOptions();
 		ops.addArguments("--disable-notifications");
-		
+		/*
 		ops.addArguments("--headless"); // headless mode
 		ops.addArguments("--disable-gpu"); // Disable GPU acceleration for headless mode
 		ops.addArguments("--no-sandbox"); // for headless mode in CI/CD environments
 		ops.addArguments("--window-size=1920x1080");
 		ops.addArguments("--disable-dev-shm-usage");
 		// System.setProperty("webdriver.chrome.driver", "./lib/chromedriver");
-		
+		*/
 		//System.setProperty("webdriver.chrome.driver", "C:\\Users\\pvenkatarajan\\Downloads\\chromedriver-win64\\chromedriver.exe");
 		System.setProperty("webdriver.chrome.driver", "src/chromedriver.exe");
 		
@@ -75,6 +76,7 @@ public class Test1 {
 	}
 
 	@Test
+	@Parameters("ownerName")
 	public void crmTest1() throws Exception {
 
 		try {
@@ -100,7 +102,7 @@ public class Test1 {
 		js0.executeScript("arguments[0].focus();", login);
 		js0.executeScript("arguments[0].click();", login);
 		System.out.println("svc acct login click done");
-		Thread.sleep(5000);
+		Thread.sleep(15000);
 		
 		//-----
 		  Thread.sleep(3000);
@@ -112,9 +114,11 @@ public class Test1 {
 		Thread.sleep(3000);
 		  System.out.println("after screenshot2");
 		//-----
+		  verifyTextOnPage();
+		 
 		
 		} catch (Exception e) {
-			System.out.println("CRM-TEST1 LOGIN DID NOT HAPPEN");
+			System.out.println("CRM-TEST1 LOGIN CLICK CATCH");
 			//-----
 			  Thread.sleep(3000);
 			  System.out.println("before screenshot3");
@@ -274,6 +278,7 @@ public class Test1 {
 	// }
 
 	@Test
+	@Parameters("ownerName")
 	public void crmTest2() throws Exception {
 
 		driver.navigate().refresh();
@@ -491,7 +496,7 @@ public class Test1 {
 		
 		
 		try {
-			WebElement element3 = driver.findElement(By.xpath("(//omnistudio-flex-action[contains(@class, 'flexActionElement')]//a[contains(@class, 'slds-action_item')])[71]"));
+			WebElement element3 = driver.findElement(By.xpath("(//omnistudio-flex-action[contains(@class, 'flexActionElement')]//a[contains(@class, 'slds-action_item')])[77]"));
 			//WebElement element3 = driver.findElement(By.xpath("(//omnistudio-flex-action[contains(@class, 'flexActionElement')]//a[contains(@class, 'slds-action_item')])[15]"));		
 			
 			WebDriverWait wait3 = new WebDriverWait(driver, Duration.ofSeconds(40));
@@ -806,7 +811,7 @@ public class Test1 {
 	@Test
 	public void crmTest4() throws Exception {
 		try {
-
+			
 			/*
 			 * driver.navigate().refresh(); //
 			 * driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
@@ -816,8 +821,8 @@ public class Test1 {
 			/*
 			 * //driver.manage().window().setSize(new Dimension(1024, 768));
 			 * waitForPageToLoad(driver);
-			 * System.out.println("Waiting for page to fully load."); JavascriptExecutor js
-			 * = (JavascriptExecutor) driver;
+			 * System.out.println("Waiting for page to fully load."); 
+			 * JavascriptExecutor js = (JavascriptExecutor) driver;
 			 * js.executeScript("document.body.style.zoom='30%'");
 			 * js.executeScript("window.scroll(0,0);"); Thread.sleep(3000);
 			 */
@@ -827,27 +832,224 @@ public class Test1 {
 			waitForPageToLoad(driver);
 			System.out.println("Waiting for page to fully load. - crmTest4 ");
 			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("window.scroll(0,0);");
+			  js.executeScript("document.body.style.zoom='30%'"); 
+			  Thread.sleep(15000);
+				js.executeScript("window.scroll(0,0);");
+			  Thread.sleep(15000);
+			  System.out.println("Waiting for page to fully load2. - crmTest4 ");
+			  Thread.sleep(5000);
+/*
+			// HANDLE NEW INCOME ADD DROPDOWN
+			try
+			{
+				JavascriptExecutor js9 = (JavascriptExecutor) driver;
+				js9.executeScript("arguments[0].click();", driver.findElement(By.xpath("(//input[@placeholder='Add New'])[1]")));
+				Thread.sleep(5000);
+				a1.sendKeys(Keys.ARROW_DOWN).perform();
+				a1.sendKeys(Keys.ARROW_DOWN).perform();
+				a1.sendKeys(Keys.ENTER).perform();
+				Thread.sleep(20000);
+				js9.executeScript("document.getElementById('my-date-input-6243').value = 'December 2024';");
+				Thread.sleep(20000);
+				js9.executeScript("arguments[0].click();", driver.findElement(By.xpath("(//*[@title='Cancel'])[5])")));
+				Thread.sleep(20000);
+				System.out.println("TRY - HANDLE NEW INCOME ADD DROPDOWN");
+				Thread.sleep(5000);
+			}
+			catch(Exception e)
+			{System.out.println("CATCH - HANDLE NEW INCOME ADD DROPDOWN");
+			Thread.sleep(5000);}
+	*/		
+			
+			// &&&&&&& HANDLE THE INCOME ADDITION TILE &&&&&&&&&&
+			try {
+			if(driver.findElement(By.xpath("(//*[contains(text(), 'We found an income record from the applicant(s)')])[1]")).isDisplayed())
+			{
+              driver.findElement(By.xpath("(//div[contains(@class, 'slds-text-align_center') and contains(@data-style-id, 'state0element0block_element0block_element3block_element0')])[1]")).click();
+              Thread.sleep(20000);
+              System.out.println("Income add complete - existing income add complete");
+              Thread.sleep(2000);
+  			for (int i = 1; i < 7; i++) {a1.sendKeys(Keys.TAB).perform(); Thread.sleep(500);}
+  			Thread.sleep(500);
+  			a1.sendKeys("a").perform();
+  			Thread.sleep(500);
+  			a1.sendKeys(Keys.TAB).perform();
+  			Thread.sleep(500);
+  			a1.sendKeys("a").perform();
+  			Thread.sleep(500);
+  			a1.sendKeys(Keys.TAB).perform();
+  			Thread.sleep(500);
+  			a1.sendKeys(Keys.ENTER).perform();
+  			Thread.sleep(500);
+  			a1.sendKeys(Keys.ARROW_DOWN).perform();
+  			Thread.sleep(500);
+  			a1.sendKeys(Keys.ARROW_DOWN).perform();
+  			Thread.sleep(500);
+  			a1.sendKeys(Keys.ENTER).perform();
+  			Thread.sleep(500);
+  			a1.sendKeys(Keys.TAB).perform();
+  			Thread.sleep(500);
+  			a1.sendKeys("5125011234").perform();
+  			Thread.sleep(500);
+  			//---
+  			driver.findElement(By.xpath("(//input[contains(@aria-controls, 'combobox-list-') and @role='combobox' and contains(@id, 'comboboxId-')])[28]")).click();
+  			Thread.sleep(5000);
+  			//---
+  			a1.sendKeys(Keys.ENTER).perform();
+  			Thread.sleep(500);
+  			a1.sendKeys(Keys.ARROW_DOWN).perform();
+  			Thread.sleep(500);
+  			a1.sendKeys(Keys.ARROW_DOWN).perform();
+  			Thread.sleep(500);
+  			a1.sendKeys(Keys.ENTER).perform();
+  			Thread.sleep(500);
+  			//---
+  			a1.sendKeys(Keys.TAB).perform();
+  			Thread.sleep(500);
+  			a1.sendKeys(Keys.SPACE).perform();
+  			Thread.sleep(500);
+  			a1.sendKeys(Keys.TAB).perform();
+  			Thread.sleep(500);
+  			a1.sendKeys(Keys.SPACE).perform();
+  			Thread.sleep(500);
+  			a1.sendKeys(Keys.TAB).perform();
+  			Thread.sleep(500);
+  			a1.sendKeys(Keys.ENTER).perform();
+  			Thread.sleep(5000);
+  			a1.sendKeys(Keys.ARROW_DOWN).perform();
+  			Thread.sleep(500);
+  			a1.sendKeys(Keys.ARROW_DOWN).perform();
+  			Thread.sleep(500);
+  			a1.sendKeys(Keys.ENTER).perform();
+  			Thread.sleep(5000);
+  			//--
+  			a1.sendKeys(Keys.TAB).perform();
+  			Thread.sleep(500);
+  			a1.sendKeys("99999999").perform();
+  			Thread.sleep(500);
+  			for (int i = 1; i < 5; i++) {a1.sendKeys(Keys.TAB).perform(); Thread.sleep(500);}
+  			Thread.sleep(500);
+  			a1.sendKeys(Keys.ENTER).perform();
+  			Thread.sleep(30000);
+  			System.out.println("Income add TILE COMPLETETED");
 
-			WebElement e7 = driver.findElement(By.xpath(
-					"//p[text()='Note that alimony, child support, or separate maintenance income need not be revealed if you do not wish to have it considered as a basis of repaying this obligation.']"));
-
+			}}
+			catch(Exception e)
+			{System.out.println("Income add catch - existing income add catch");}
+			
+			
+			
+			// &&&&&&&&&&  VERIFY THE INCOME
+			try {
+				Thread.sleep(10000);
+				driver.findElement(By.xpath("(//*[contains(text(), '| Employment | a |')])[2]")).click();
+				Thread.sleep(15000);
+				driver.findElement(By.xpath("(//*[text()='Verify Income'])[4]")).click();
+				Thread.sleep(15000);
+				driver.findElement(By.xpath("(//*[text()='Verify Employment Income'])[2]")).click();
+				Thread.sleep(10000);
+				a1.sendKeys(Keys.TAB).perform();
+	  			Thread.sleep(500);
+	  			a1.sendKeys(Keys.ARROW_DOWN).perform();
+	  			Thread.sleep(500);
+	  			a1.sendKeys(Keys.ARROW_DOWN).perform();
+	  			Thread.sleep(500);
+	  			a1.sendKeys(Keys.ENTER).perform();
+	  			Thread.sleep(500);
+	  			a1.sendKeys(Keys.TAB).perform();
+	  			Thread.sleep(500);
+	  			a1.sendKeys(Keys.TAB).perform();
+	  			Thread.sleep(500);
+	  			a1.sendKeys(Keys.ENTER).perform();
+	  			Thread.sleep(5000);
+	  			a1.sendKeys(Keys.ARROW_DOWN).perform();
+	  			Thread.sleep(5000);
+	  			//a1.sendKeys(Keys.ARROW_DOWN).perform();
+	  			//Thread.sleep(500);
+	  			a1.sendKeys(Keys.ENTER).perform();
+	  			Thread.sleep(5000);
+	  			a1.sendKeys(Keys.TAB).perform();
+	  			Thread.sleep(500);
+	  			a1.sendKeys(Keys.TAB).perform();
+	  			Thread.sleep(500);
+	  			a1.sendKeys(Keys.ARROW_DOWN).perform();
+	  			Thread.sleep(500);
+	  			a1.sendKeys(Keys.ARROW_DOWN).perform();
+	  			Thread.sleep(500);
+	  			a1.sendKeys(Keys.ENTER).perform();
+	  			Thread.sleep(500);
+	  			a1.sendKeys(Keys.TAB).perform();
+	  			Thread.sleep(500);
+	  			a1.sendKeys("999999999").perform();
+	  			Thread.sleep(500);
+	  			a1.sendKeys(Keys.TAB).perform();
+	  			Thread.sleep(500);
+	  			a1.sendKeys(Keys.SPACE).perform();
+	  			Thread.sleep(500);
+	  			a1.sendKeys(Keys.TAB).perform();
+	  			Thread.sleep(500);
+	  			a1.sendKeys(Keys.TAB).perform();
+	  			Thread.sleep(5000);
+	  			a1.sendKeys(Keys.ENTER).perform();
+	  			Thread.sleep(20000);
+	  			waitForPageToLoad(driver);
+	  			System.out.println("VERIFY INCOME COMPLETE1");
+	  			Thread.sleep(2000);
+	  			WebElement e09 = driver.findElement(By.xpath("(//*[contains(@title, 'Save')])[20]"));
+	  			//----
+				WebDriverWait wait09 = new WebDriverWait(driver, Duration.ofSeconds(160));
+				wait09.until(ExpectedConditions.elementToBeClickable(e09));
+				js.executeScript("arguments[0].click();", e09);
+				//Thread.sleep(15000);
+	  			//----
+	  			Thread.sleep(20000);
+	  			System.out.println("VERIFY INCOME COMPLETE2");
+	  			
+			}
+			catch(Exception e)
+			{System.out.println("VERIFY INCOME CATCH");}
+			
+			
+			
+			Thread.sleep(10000);
+			
+			WebElement e7 = driver.findElement(By.xpath("(//*[contains(text(), 'Non-Applicant Other Party')])[1]"));
+					// -->  "//p[text()='Note that alimony, child support, or separate maintenance income need not be revealed if you do not wish to have it considered as a basis of repaying this obligation.']"));
+			/*
+			try {
 			js.executeScript("arguments[0].scrollIntoView(true);", e7);
 
 			WebDriverWait wait7 = new WebDriverWait(driver, Duration.ofSeconds(120));
 			wait7.until(ExpectedConditions.elementToBeClickable(e7));
 
 			js.executeScript("arguments[0].click();", e7);
-			Thread.sleep(2000);
-
-			for (int i = 1; i < 5; i++) {
-				a1.sendKeys(Keys.TAB).perform();
+			Thread.sleep(20000);
+			System.out.println("NAOP COMPLETE");
 			}
+			catch(Exception e)
+			{System.out.println("NAOP CATCH");
+			Thread.sleep(8000);}
+			
+			//for (int i = 1; i < 5; i++) {
+				a1.sendKeys(Keys.TAB).perform();
+			//}
+				Thread.sleep(500);
 			a1.sendKeys(Keys.ENTER).perform();
 			Thread.sleep(500);
 			a1.sendKeys(Keys.ARROW_RIGHT).perform();
 			Thread.sleep(500);
+			a1.sendKeys(Keys.SPACE).perform();
+			Thread.sleep(500);
+			*/
+			
+			WebElement e08 = driver.findElement(By.xpath("(//*[text()='No'])[13]"));
+//	js.executeScript("arguments[0].scrollIntoView(true);", e7);
+	WebDriverWait wait08 = new WebDriverWait(driver, Duration.ofSeconds(120));
+	wait08.until(ExpectedConditions.elementToBeClickable(e08));
 
+	js.executeScript("arguments[0].click();", e08);
+	Thread.sleep(15000);
+					
 			a1.sendKeys(Keys.TAB).perform();
 			Thread.sleep(500);
 			a1.sendKeys(Keys.SPACE).perform();
@@ -856,12 +1058,39 @@ public class Test1 {
 			waitForPageToLoad(driver);
 			System.out.println("Waiting for page to fully load.");
 			js.executeScript("window.scroll(0,0);");
-			Thread.sleep(3000);
+			Thread.sleep(30000);
 
-			e7.click();
-			for (int i = 1; i < 7; i++) {
+			//again n
+			js.executeScript("arguments[0].click();", e08);
+			Thread.sleep(15000);
+			a1.sendKeys(Keys.TAB).perform();
+			Thread.sleep(500);
+					
+			a1.sendKeys(Keys.TAB).perform();
+			Thread.sleep(500);
+			a1.sendKeys(Keys.TAB).perform();
+			Thread.sleep(500);
+			a1.sendKeys("a").perform();
+			Thread.sleep(500);
+			a1.sendKeys(Keys.TAB).perform();
+			Thread.sleep(500);
+			a1.sendKeys("a").perform();
+			Thread.sleep(500);
+			a1.sendKeys(Keys.TAB).perform();
+			Thread.sleep(500);
+			a1.sendKeys(Keys.ENTER).perform();
+			Thread.sleep(5000);
+			a1.sendKeys(Keys.ARROW_DOWN).perform();
+			Thread.sleep(500);
+			a1.sendKeys(Keys.ARROW_DOWN).perform();
+			Thread.sleep(500);
+			a1.sendKeys(Keys.ENTER).perform();
+			Thread.sleep(20000);
+			
+			//e7.click();
+			//for (int i = 1; i < 4; i++) {
 				a1.sendKeys(Keys.TAB).perform();
-			}
+		//	}
 			Thread.sleep(500);
 			a1.sendKeys(Keys.SPACE).perform();
 			Thread.sleep(500);
@@ -869,16 +1098,19 @@ public class Test1 {
 			Thread.sleep(500);
 			a1.sendKeys(Keys.SPACE).perform();
 			Thread.sleep(500);
-
+/*
 			waitForPageToLoad(driver);
 			System.out.println("Waiting for page to fully load.");
 			js.executeScript("window.scroll(0,0);");
 			Thread.sleep(3000);
-
+			*/
+/*
 			e7.click();
 			for (int i = 1; i < 9; i++) {
 				a1.sendKeys(Keys.TAB).perform();
 			}
+			*/
+			/*
 			Thread.sleep(5000);
 			waitForPageToLoad(driver);
 			System.out.println("Waiting for page to fully load.");
@@ -887,9 +1119,10 @@ public class Test1 {
 			// a1.sendKeys(Keys.ENTER).perform();
 			// Thread.sleep(15000);
 			// -----
+*/	
 
 			Thread.sleep(5000);
-			WebElement e8 = driver.findElement(By.xpath("(//*[contains(text(), 'Next')])[6]"));
+			WebElement e8 = driver.findElement(By.xpath("(//*[contains(text(), 'Next')])[7]"));
 			System.out.println("Waiting for page to fully load. - NAOP STARTED");
 			// JavascriptExecutor js = (JavascriptExecutor) driver;
 			js.executeScript("arguments[0].scrollIntoView(true);", e8);
@@ -1137,6 +1370,7 @@ public class Test1 {
 			a1.sendKeys(Keys.ENTER).perform();
 			Thread.sleep(500);
 
+			
 			for (int i2 = 1; i2 < 3; i2++) {
 				a1.sendKeys(Keys.TAB).perform();
 			}
@@ -1163,13 +1397,97 @@ public class Test1 {
 
 		Thread.sleep(8000);
 
+   //   &&&&&&&&  INCOME EMPLOYMENT VERIFICATION		
+
+ try{
+		if(driver.findElement(By.xpath("//*[contains(text(), '| Employment | a |')]")).isDisplayed())
+		{
+		driver.findElement(By.xpath("//*[contains(text(), '| Employment | a |')]")).click();
+		Thread.sleep(10000);
+//
+		for (int i3 = 1; i3 < 4; i3++) {a1.sendKeys(Keys.TAB).perform();
+		Thread.sleep(500);}
+		a1.sendKeys(Keys.ENTER).perform();
+		Thread.sleep(10000);
+		for (int i3 = 1; i3 < 3; i3++) {a1.sendKeys(Keys.TAB).perform();
+		Thread.sleep(500);}
+		a1.sendKeys(Keys.ENTER).perform();
+		Thread.sleep(10000);
+		for (int i3 = 1; i3 < 3; i3++) {a1.sendKeys(Keys.ARROW_DOWN).perform();Thread.sleep(500);}
+		a1.sendKeys(Keys.ENTER).perform();
+		Thread.sleep(10000);
+		for (int i3 = 1; i3 < 3; i3++) {a1.sendKeys(Keys.TAB).perform();
+		Thread.sleep(500);}
+		a1.sendKeys(Keys.ENTER).perform();
+		Thread.sleep(10000);
+		for (int i3 = 1; i3 < 3; i3++) {a1.sendKeys(Keys.ARROW_DOWN).perform();
+		Thread.sleep(500);}
+		a1.sendKeys(Keys.ENTER).perform();
+		Thread.sleep(10000);
+		a1.sendKeys(Keys.TAB).perform();
+		Thread.sleep(500);
+		a1.sendKeys(Keys.ENTER).perform();
+		Thread.sleep(10000);
+		for (int i3 = 1; i3 < 3; i3++) {a1.sendKeys(Keys.ARROW_DOWN).perform();
+		Thread.sleep(500);}
+		a1.sendKeys(Keys.ENTER).perform();
+		Thread.sleep(10000);
+		a1.sendKeys(Keys.TAB).perform();
+		Thread.sleep(500);
+		a1.sendKeys("99999999").perform();
+		Thread.sleep(500);
+		a1.sendKeys(Keys.ENTER).perform();
+		Thread.sleep(5000);
+		a1.sendKeys(Keys.TAB).perform();
+		Thread.sleep(500);
+		a1.sendKeys(Keys.ENTER).perform();
+		Thread.sleep(5000);
+		a1.sendKeys(Keys.SPACE).perform();
+		Thread.sleep(500);
+		for (int i3 = 1; i3 < 3; i3++) {a1.sendKeys(Keys.TAB).perform();
+		Thread.sleep(500);}
+		a1.sendKeys(Keys.ENTER).perform();
+		Thread.sleep(10000);
+		driver.findElement(By.xpath("(//*[@title='Save'])[6]")).click();
+		Thread.sleep(25000);
+		//
+		/*
+			t 3
+			enter
+			t 2
+			enetr
+			down arrow 2
+			eneter
+			t 2
+			enter
+			down arrow 2
+			enetr
+			t eneter 
+			down arrow 2
+			enetr
+			t sendkeys(99999999) enetr
+			t enetr space	
+			t 2 enetre
+			click on (//*[@title='Save'])[6]
+			*/
+		}}
+		catch(Exception e)
+		{System.out.println("Employment verification catch");}
+		
+		
+	
 		try {
+			/*
 			for (int i = 1; i < 3; i++) {
 				a1.sendKeys(Keys.TAB).perform();
 			}
 			a1.sendKeys(Keys.ENTER).perform();
 			Thread.sleep(500);
-
+			*/
+			if(driver.findElement(By.xpath("//*[contains(text(), 'Proof of ID')]")).isDisplayed())
+			{
+				driver.findElement(By.xpath("//*[contains(text(), 'Proof of ID')]")).click();
+				Thread.sleep(5000);
 			for (int i = 1; i < 3; i++) {
 				a1.sendKeys(Keys.TAB).perform();
 			}
@@ -1214,14 +1532,20 @@ public class Test1 {
 			a1.sendKeys(Keys.ENTER).perform();
 			Thread.sleep(8000);
 			a1.sendKeys(Keys.ESCAPE).perform();
-			Thread.sleep(9000);
+			Thread.sleep(20000);
 
-		} catch (NoSuchElementException e) {
+		}} catch (NoSuchElementException e) {
 			System.out.println("Verification catch 2 - section2 catch");
 		}
-
+	}
 		// ++++++++++++
 
+
+	@Test
+	public void crmTest06() throws Exception {
+		
+		try {
+			Thread.sleep(2000);
 		WebElement e8 = driver.findElement(By.xpath("(//*[text()='Open'])[2]"));
 		// p[text()='Tell me about any unsatisfied judgments you may have, if
 		// applicable.']"));
@@ -1258,19 +1582,26 @@ public class Test1 {
 
 		for (int i1 = 1; i1 < 3; i1++) {
 			a1.sendKeys(Keys.TAB).perform();
+			Thread.sleep(500);
 		}
 		a1.sendKeys(Keys.ENTER).perform();
-		Thread.sleep(5000);
+		Thread.sleep(20000);
 
 		a1.sendKeys(Keys.TAB).perform();
 		a1.sendKeys(Keys.ENTER).perform();
 		a1.sendKeys(Keys.ESCAPE).perform();
-
+		System.out.println("PROPERTY ADD COMPLETE");
+		Thread.sleep(5000);
+		}
+		 catch (NoSuchElementException e) {
+				System.out.println("PROPERTY ADD CATCH");
+			}
+		 
 		waitForPageToLoad(driver);
 		Thread.sleep(500);
 		System.out.println("Waiting for page to fully load.");
 		js.executeScript("window.scroll(0,0);");
-		Thread.sleep(5000);
+		Thread.sleep(15000);
 
 		driver.findElement(By.xpath("//*[text()='Loan Details']")).click();
 		for (int i = 1; i < 3; i++) {
@@ -1344,23 +1675,26 @@ public class Test1 {
 			// kkkkkkkkkkkkkkkkkkk
 
 			//Thread.sleep(25000);
-
+			WebDriverWait wait8 = new WebDriverWait(driver, Duration.ofSeconds(180));
+/*  //PROPERTY CHECKBOX START
 			WebElement e10 = driver.findElement(By.xpath("(//input[@type='checkbox'])[2]"));
 			// p[text()='Tell me about any unsatisfied judgments you may have, if
 			// applicable.']"));
-
 			js.executeScript("arguments[0].scrollIntoView(true);", e10);
-
-			WebDriverWait wait8 = new WebDriverWait(driver, Duration.ofSeconds(180));
 			wait8.until(ExpectedConditions.elementToBeClickable(e10));
 			// JavascriptExecutor js8 = (JavascriptExecutor) driver;
 			js.executeScript("arguments[0].click();", e10);
 
 			Thread.sleep(40000);
+//PROPERTY CHECKBOX END			
+ */
+			
 			System.out.println("Waiting for page to fully load. - crmTest7 STARTED n clicked on CHECKBOX");
 			waitForPageToLoad(driver);
 
-			WebElement e8 = driver.findElement(By.xpath("(//*[text()='Select Loan Class'])[2]"));
+			WebElement e8 = driver.findElement(By.xpath("(//*[text()='KY Conventional'])[2]")); 
+		//REPLACE THIS XPATH ---> //driver.findElement(By.xpath("(//*[text()='Select Loan Class'])[2]"));
+			
 			// p[text()='Tell me about any unsatisfied judgments you may have, if
 			// applicable.']"));
 
@@ -1400,6 +1734,11 @@ public class Test1 {
 			Thread.sleep(3000);
 
 			Thread.sleep(20000);
+			
+			if(driver.findElement(By.xpath("(//*[text()='Please include at least one collateral entry in this offer'])[2]")).isDisplayed())
+			{System.out.println("MESSAGE THROWN - PLEASE INCLUDE AT LEAST ONE COLLATERAL");}
+			Thread.sleep(5000);
+			
 			WebElement e11 = driver.findElement(By.xpath("(//button[contains(text(), 'Calculate')])[2]"));
 			System.out.println("Waiting for page to fully load. - CALCULATE STARTED");
 			JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -1783,6 +2122,9 @@ public class Test1 {
 			  System.out.println(" beneficiary added"); 
 			  Thread.sleep(5000);
 			  
+			  
+			  //  &&&&&&&&&&  ADD EXISTING REFERENCES
+			  
 			  try {
 				  System.out.println("came into EXISTING addReference try block");
 				  Thread.sleep(5000);
@@ -1801,7 +2143,7 @@ public class Test1 {
 			  {System.out.println("came into EXISTING addReference catch block");
 			  Thread.sleep(5000);}
 			  
-			  
+			  //   &&&&&&&&&&&  ADD NEW REFERENCES
 			  /*
 			  try {
 				  System.out.println("came into addReference try block");
@@ -2013,6 +2355,33 @@ public class Test1 {
 		js.executeScript("arguments[0].scrollIntoView(true);", element);
 	}
 
+	
+    public void verifyTextOnPage() {
+  
+        // Text to verify
+        String expectedText = "verification code"; 
+
+        // Use WebDriverWait to ensure the page is fully loaded
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+        WebElement bodyElement = wait.until(ExpectedConditions.presenceOfElementLocated(By.tagName("body")));
+
+        // Verify if the text is present in the body element
+        boolean isTextPresent = bodyElement.getText().contains(expectedText);
+
+        // Assert that the text is found
+       // Assert.assertTrue(isTextPresent, "ASSERT SAYS - VERIFICATION CODE PRESENT1");
+        Assert.assertFalse(isTextPresent, "ASSERT SAYS - VERIFICATION CODE NOT PRESENT1");
+        //Assert.assertEquals(isTextPresent, isTextPresent, expectedText);
+        // Log result
+        if (isTextPresent) {
+            System.out.println("ASSERT SAYS - VERIFICATION CODE PRESENT2");
+            Reporter.log("REPORTER in main SAYS - AFTER ASSERT - VERIFICATION CODE PRESENT\n");
+        }
+        else
+        {System.out.println("ASSERT SAYS - VERIFICATION CODE NOT PRESENT2");
+        Reporter.log("REPORTER in main SAYS - AFTER ASSERT - VERIFICATION CODE NOT PRESENT\n");}
+    }
+	
 	public static void waitForPageToLoad(WebDriver driver) {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		org.openqa.selenium.support.ui.WebDriverWait wait = new org.openqa.selenium.support.ui.WebDriverWait(driver,

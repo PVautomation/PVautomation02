@@ -1,89 +1,250 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="24" total="29" passed="4" failed="1" skipped="0">
   <reporter-output>
+    <line>
+      <![CDATA[<a href='C:\Users\pvenkatarajan\GIT2\PVautomation02\JavaMavenTestNG/screenshots/test1.png' target='_blank'>Screenshot</a>
+]]>
+    </line>
+    <line>
+      <![CDATA[REPORTER for fail in listner1
+]]>
+    </line>
+    <line>
+      <![CDATA[<a href='C:\Users\pvenkatarajan\GIT2\PVautomation02\JavaMavenTestNG/screenshots/test2.png' target='_blank'>Screenshot</a>
+]]>
+    </line>
+    <line>
+      <![CDATA[REPORTER for pass in listner1
+]]>
+    </line>
+    <line>
+      <![CDATA[<a href='C:\Users\pvenkatarajan\GIT2\PVautomation02\JavaMavenTestNG/screenshots/test3.png' target='_blank'>Screenshot</a>
+]]>
+    </line>
+    <line>
+      <![CDATA[REPORTER for pass in listner1
+]]>
+    </line>
+    <line>
+      <![CDATA[REPORTER in main SAYS - AFTER ASSERT - VERIFICATION CODE NOT PRESENT
+]]>
+    </line>
+    <line>
+      <![CDATA[<a href='C:\Users\pvenkatarajan\GIT2\PVautomation02\JavaMavenTestNG/screenshots/crmTest1.png' target='_blank'>Screenshot</a>
+]]>
+    </line>
+    <line>
+      <![CDATA[REPORTER for pass in listner1
+]]>
+    </line>
+    <line>
+      <![CDATA[<a href='C:\Users\pvenkatarajan\GIT2\PVautomation02\JavaMavenTestNG/screenshots/crmTest2.png' target='_blank'>Screenshot</a>
+]]>
+    </line>
+    <line>
+      <![CDATA[REPORTER for pass in listner1
+]]>
+    </line>
   </reporter-output>
-  <suite started-at="2024-12-06T00:02:15 CST" name="Suite" finished-at="2024-12-06T00:04:19 CST" duration-ms="124039">
+  <suite started-at="2024-12-13T17:53:57 CST" name="Suite" finished-at="2024-12-13T17:58:24 CST" duration-ms="266959">
     <groups>
     </groups>
-    <test started-at="2024-12-06T00:02:15 CST" name="Test" finished-at="2024-12-06T00:04:19 CST" duration-ms="124039">
+    <test started-at="2024-12-13T17:53:57 CST" name="Test" finished-at="2024-12-13T17:58:24 CST" duration-ms="266959">
       <class name="JavaMavenTestNG.JavaMavenTestNG.NewTest">
-        <test-method is-config="true" signature="setUp(org.testng.ITestContext)[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@14028087]" started-at="2024-12-06T00:02:15 CST" name="setUp" finished-at="2024-12-06T00:02:17 CST" duration-ms="1847" status="PASS">
+        <test-method is-config="true" signature="setUp(org.testng.ITestContext)[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@242b836]" started-at="2024-12-13T17:53:57 CST" name="setUp" finished-at="2024-12-13T17:53:59 CST" duration-ms="1910" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@78f9ed3e]]>
+                <![CDATA[org.testng.TestRunner@45394b31]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@14028087]" started-at="2024-12-06T00:02:17 CST" name="beforeClass" finished-at="2024-12-06T00:02:17 CST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@242b836]" started-at="2024-12-13T17:53:59 CST" name="beforeClass" finished-at="2024-12-13T17:53:59 CST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@14028087]" started-at="2024-12-06T00:02:17 CST" name="beforeMethod" finished-at="2024-12-06T00:02:17 CST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@242b836]" started-at="2024-12-13T17:53:59 CST" name="beforeMethod" finished-at="2024-12-13T17:53:59 CST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="test1()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@14028087]" started-at="2024-12-06T00:02:17 CST" name="test1" finished-at="2024-12-06T00:03:20 CST" duration-ms="63452" status="PASS">
+        <test-method signature="test1()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@242b836]" started-at="2024-12-13T17:53:59 CST" name="test1" finished-at="2024-12-13T17:56:05 CST" duration-ms="125640" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[text()='Account Summary']"}
+  (Session info: chrome=131.0.6778.140)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [18364cce669e3df6f1ffdd4384065816, findElement {using=xpath, value=//*[text()='Account Summary']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.140, chrome: {chromedriverVersion: 131.0.6778.87 (ce31cae94873..., userDataDir: C:\Users\PVENKA~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49294}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49294/devtoo..., se:cdpVersion: 131.0.6778.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 18364cce669e3df6f1ffdd4384065816]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[text()='Account Summary']"}
+  (Session info: chrome=131.0.6778.140)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [18364cce669e3df6f1ffdd4384065816, findElement {using=xpath, value=//*[text()='Account Summary']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.140, chrome: {chromedriverVersion: 131.0.6778.87 (ce31cae94873..., userDataDir: C:\Users\PVENKA~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49294}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49294/devtoo..., se:cdpVersion: 131.0.6778.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 18364cce669e3df6f1ffdd4384065816
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+at JavaMavenTestNG.JavaMavenTestNG.NewTest.test1(NewTest.java:42)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
+            <line>
+              <![CDATA[<a href='C:\Users\pvenkatarajan\GIT2\PVautomation02\JavaMavenTestNG/screenshots/test1.png' target='_blank'>Screenshot</a>
+]]>
+            </line>
+            <line>
+              <![CDATA[REPORTER for fail in listner1
+]]>
+            </line>
           </reporter-output>
         </test-method> <!-- test1 -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@14028087]" started-at="2024-12-06T00:03:20 CST" name="afterMethod" finished-at="2024-12-06T00:03:20 CST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@242b836]" started-at="2024-12-13T17:56:05 CST" name="afterMethod" finished-at="2024-12-13T17:56:05 CST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method signature="test2()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@14028087]" started-at="2024-12-06T00:03:20 CST" name="test2" finished-at="2024-12-06T00:03:20 CST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@242b836]" started-at="2024-12-13T17:56:05 CST" name="beforeMethod" finished-at="2024-12-13T17:56:05 CST" duration-ms="0" status="PASS">
           <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="test2()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@242b836]" started-at="2024-12-13T17:56:05 CST" name="test2" finished-at="2024-12-13T17:56:05 CST" duration-ms="5" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[<a href='C:\Users\pvenkatarajan\GIT2\PVautomation02\JavaMavenTestNG/screenshots/test2.png' target='_blank'>Screenshot</a>
+]]>
+            </line>
+            <line>
+              <![CDATA[REPORTER for pass in listner1
+]]>
+            </line>
           </reporter-output>
         </test-method> <!-- test2 -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@14028087]" started-at="2024-12-06T00:03:20 CST" name="afterMethod" finished-at="2024-12-06T00:03:20 CST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@242b836]" started-at="2024-12-13T17:56:05 CST" name="afterMethod" finished-at="2024-12-13T17:56:05 CST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@14028087]" started-at="2024-12-06T00:03:20 CST" name="beforeMethod" finished-at="2024-12-06T00:03:20 CST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@242b836]" started-at="2024-12-13T17:56:05 CST" name="beforeMethod" finished-at="2024-12-13T17:56:05 CST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="test3()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@14028087]" started-at="2024-12-06T00:03:20 CST" name="test3" finished-at="2024-12-06T00:03:20 CST" duration-ms="0" status="PASS">
+        <test-method signature="test3()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@242b836]" started-at="2024-12-13T17:56:05 CST" name="test3" finished-at="2024-12-13T17:56:05 CST" duration-ms="0" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[<a href='C:\Users\pvenkatarajan\GIT2\PVautomation02\JavaMavenTestNG/screenshots/test3.png' target='_blank'>Screenshot</a>
+]]>
+            </line>
+            <line>
+              <![CDATA[REPORTER for pass in listner1
+]]>
+            </line>
           </reporter-output>
         </test-method> <!-- test3 -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@14028087]" started-at="2024-12-06T00:03:20 CST" name="afterMethod" finished-at="2024-12-06T00:03:20 CST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@242b836]" started-at="2024-12-13T17:56:05 CST" name="afterMethod" finished-at="2024-12-13T17:56:05 CST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@14028087]" started-at="2024-12-06T00:03:20 CST" name="beforeMethod" finished-at="2024-12-06T00:03:20 CST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@14028087]" started-at="2024-12-06T00:03:20 CST" name="afterClass" finished-at="2024-12-06T00:03:20 CST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@14028087]" started-at="2024-12-06T00:03:20 CST" name="tearDown" finished-at="2024-12-06T00:03:21 CST" duration-ms="805" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@242b836]" started-at="2024-12-13T17:56:05 CST" name="tearDown" finished-at="2024-12-13T17:56:06 CST" duration-ms="836" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@242b836]" started-at="2024-12-13T17:56:05 CST" name="afterClass" finished-at="2024-12-13T17:56:05 CST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
       </class> <!-- JavaMavenTestNG.JavaMavenTestNG.NewTest -->
       <class name="JavaMavenTestNG.JavaMavenTestNG.Test1">
-        <test-method is-config="true" signature="setUp(org.testng.ITestContext)[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.Test1@6c284af]" started-at="2024-12-06T00:03:21 CST" name="setUp" finished-at="2024-12-06T00:03:22 CST" duration-ms="1255" status="PASS">
+        <test-method is-config="true" signature="setUp(org.testng.ITestContext)[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.Test1@121314f7]" started-at="2024-12-13T17:56:06 CST" name="setUp" finished-at="2024-12-13T17:56:07 CST" duration-ms="1291" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@78f9ed3e]]>
+                <![CDATA[org.testng.TestRunner@45394b31]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="crmTest1()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.Test1@6c284af]" started-at="2024-12-06T00:03:22 CST" name="crmTest1" finished-at="2024-12-06T00:04:18 CST" duration-ms="55819" status="PASS">
+        <test-method signature="crmTest1()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.Test1@121314f7]" started-at="2024-12-13T17:56:07 CST" name="crmTest1" finished-at="2024-12-13T17:57:31 CST" duration-ms="83268" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[REPORTER in main SAYS - AFTER ASSERT - VERIFICATION CODE NOT PRESENT
+]]>
+            </line>
+            <line>
+              <![CDATA[<a href='C:\Users\pvenkatarajan\GIT2\PVautomation02\JavaMavenTestNG/screenshots/crmTest1.png' target='_blank'>Screenshot</a>
+]]>
+            </line>
+            <line>
+              <![CDATA[REPORTER for pass in listner1
+]]>
+            </line>
           </reporter-output>
         </test-method> <!-- crmTest1 -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.Test1@6c284af]" started-at="2024-12-06T00:04:18 CST" name="tearDown" finished-at="2024-12-06T00:04:19 CST" duration-ms="809" status="PASS">
+        <test-method signature="crmTest2()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.Test1@121314f7]" started-at="2024-12-13T17:57:31 CST" name="crmTest2" finished-at="2024-12-13T17:58:22 CST" duration-ms="50908" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[<a href='C:\Users\pvenkatarajan\GIT2\PVautomation02\JavaMavenTestNG/screenshots/crmTest2.png' target='_blank'>Screenshot</a>
+]]>
+            </line>
+            <line>
+              <![CDATA[REPORTER for pass in listner1
+]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- crmTest2 -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.Test1@121314f7]" started-at="2024-12-13T17:58:23 CST" name="tearDown" finished-at="2024-12-13T17:58:24 CST" duration-ms="873" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
