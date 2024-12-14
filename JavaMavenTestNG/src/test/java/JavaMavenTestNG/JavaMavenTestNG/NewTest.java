@@ -41,7 +41,7 @@ public class NewTest extends Test1  {
 	  Thread.sleep(20000);
 	  driver.navigate().refresh();
 	  Thread.sleep(50000);
-	  verifyTextOnPage("Funding Details");
+	  verifyTextPresent("Funding Details");
 	  /*
 	  WebElement expected = driver.findElement(By.xpath("//*[text()='Account Summary']"));
 	  if(expected.isDisplayed())

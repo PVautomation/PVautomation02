@@ -114,7 +114,7 @@ public class Test1 {
 		Thread.sleep(3000);
 		  System.out.println("after screenshot2");
 		//-----
-		  verifyTextOnPage("verification code");
+		  verifyTextNotPresent("verification code");
 		 
 		
 		} catch (Exception e) {
@@ -2356,7 +2356,7 @@ public class Test1 {
 	}
 
 	
-    public void verifyTextOnPage(String s) {
+    public void verifyTextNotPresent(String s) {
   
         // Text to verify
         String expectedText = s; 
@@ -2370,17 +2370,49 @@ public class Test1 {
 
         // Assert that the text is found
        // Assert.assertTrue(isTextPresent, "ASSERT SAYS - TEXT PRESENT1" +expectedText);
-        Assert.assertFalse(isTextPresent, "ASSERT SAYS - TEXT NOT PRESENT1"  +expectedText);
+        Assert.assertFalse(isTextPresent, "assert - ASSERT FALSE CHECK --> "  +isTextPresent + "--> ");
         //Assert.assertEquals(isTextPresent, isTextPresent, expectedText);
         // Log result
         if (isTextPresent) {
-            System.out.println("ASSERT SAYS - TEXT PRESENT2"  +expectedText);
-            Reporter.log("REPORTER in main SAYS - AFTER ASSERT - TEXT PRESENT\n"  +expectedText);
+            System.out.println("if - ASSERT FALSE CHECK --> "  +isTextPresent + "--> ");
+            Reporter.log("if - REPORTER - ASSERT FALSE CHECK"  +isTextPresent);
         }
         else
-        {System.out.println("ASSERT SAYS - TEXT NOT PRESENT2"  +expectedText);
-        Reporter.log("REPORTER in main SAYS - AFTER ASSERT - TEXT NOT PRESENT\n" +expectedText);}
+        {System.out.println("else - ASSERT FALSE CHECK"  +isTextPresent);
+        Reporter.log("else - REPORTER - ASSERT FALSE CHECK"  +isTextPresent);}
     }
+    
+    
+    
+    public void verifyTextPresent(String s) {
+    	  
+    	  
+        // Text to verify
+        String expectedText = s; 
+
+        // Use WebDriverWait to ensure the page is fully loaded
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(120));
+        WebElement bodyElement = wait.until(ExpectedConditions.presenceOfElementLocated(By.tagName("body")));
+
+        // Verify if the text is present in the body element
+        boolean isTextPresent = bodyElement.getText().contains(expectedText);
+
+        // Assert that the text is found
+       // Assert.assertTrue(isTextPresent, "ASSERT SAYS - TEXT PRESENT1" +expectedText);
+        Assert.assertTrue(isTextPresent, "assert - ASSERT TRUE CHECK --> "  +isTextPresent + "--> ");
+        //Assert.assertEquals(isTextPresent, isTextPresent, expectedText);
+        // Log result
+        if (isTextPresent) {
+            System.out.println("if - ASSERT TRUE CHECK"  +isTextPresent);
+            Reporter.log("if - REPORTER - ASSERT TRUE CHECK"  +isTextPresent);
+        }
+        else
+        {System.out.println("else - ASSERT TRUE CHECK"  +isTextPresent);
+        Reporter.log("else - REPORTER - ASSERT TRUE CHECK"  +isTextPresent);}
+        }
+    
+    
+    
 	
 	public static void waitForPageToLoad(WebDriver driver) {
 		JavascriptExecutor js = (JavascriptExecutor) driver;

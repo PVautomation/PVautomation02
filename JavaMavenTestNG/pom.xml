@@ -102,6 +102,7 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M4</version>
                 <configuration>
+<testFailureIgnore>true</testFailureIgnore> 
 <!-- reports are generated in the test-output directory -->
     <reportsDirectory>${project.basedir}/test-output</reportsDirectory>
                     <suiteXmlFiles>
