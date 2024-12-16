@@ -9,7 +9,7 @@ import java.io.File;
 import java.io.IOException;
 import org.apache.commons.io.FileUtils;
 
-public class ScreenshotUtility  {
+public class ScreenshotUtility extends ParentClass  {
 	
 	/*
     public static String captureScreenshot(WebDriver driver, String testName) throws IOException {

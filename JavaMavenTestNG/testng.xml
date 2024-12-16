@@ -9,7 +9,7 @@
 
   <test  name="Test">
     <classes>
-   <!-- -->
+   <!-- 
 <class name="JavaMavenTestNG.JavaMavenTestNG.ABSimportTestClass">
 <methods>
     <include name="test1" />
@@ -17,6 +17,11 @@
     <include name="test3" />
    </methods>
 </class>
+-->
+
+<class name="JavaMavenTestNG.JavaMavenTestNG.OfferTestClass"/>
+<class name="JavaMavenTestNG.JavaMavenTestNG.LoanCalculatorTestClass"/>
+<class name="JavaMavenTestNG.JavaMavenTestNG.ABSimportTestClass"/>
 
     <class name="JavaMavenTestNG.JavaMavenTestNG.CRMtestClass">
       <methods>
@@ -46,6 +51,7 @@
 <include name="crmTest4" /> 
 <include name="crmTest5" /> 
 <include name="crmTest6" /> 
+<include name="crmTest06" /> 
 <include name="crmTest7" />
 -->
 

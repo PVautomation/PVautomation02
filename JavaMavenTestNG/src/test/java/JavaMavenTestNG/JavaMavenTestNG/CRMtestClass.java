@@ -30,51 +30,8 @@ import org.apache.commons.io.FileUtils;
 
 
 //@TestOwner("pvenkatarajan@republicfinance.com")
-public class CRMtestClass {
-	public WebDriver driver;
-	private String baseUrl;
-	// private boolean acceptNextAlert = true;
-	private StringBuffer verificationErrors = new StringBuffer();
-	private JavascriptExecutor js;
-	Actions a1;
-
-	@BeforeClass(alwaysRun = true)
-	public void setUp(ITestContext context) throws Exception {
-
-		//WebDriverManager.chromedriver().driverVersion("131.0.6778.85").setup();
-		//WebDriverManager.chromedriver().clearResolutionCache().setup();
-		//WebDriverManager.chromedriver().setup();
-		// ChromeOptions option = new ChromeOptions();
-		// option.addArguments("--headless");
-
-		ChromeOptions ops = new ChromeOptions();
-		ops.addArguments("--disable-notifications");
-		/*
-		ops.addArguments("--headless"); // headless mode
-		ops.addArguments("--disable-gpu"); // Disable GPU acceleration for headless mode
-		ops.addArguments("--no-sandbox"); // for headless mode in CI/CD environments
-		ops.addArguments("--window-size=1920x1080");
-		ops.addArguments("--disable-dev-shm-usage");
-		// System.setProperty("webdriver.chrome.driver", "./lib/chromedriver");
-		*/
-		//System.setProperty("webdriver.chrome.driver", "C:\\Users\\pvenkatarajan\\Downloads\\chromedriver-win64\\chromedriver.exe");
-		System.setProperty("webdriver.chrome.driver", "src/chromedriver.exe");
-		
-		driver = new ChromeDriver(ops);
-		context.setAttribute("driver", driver);
-
-		// System.setProperty("webdriver.chrome.driver", "");
-		// driver = new ChromeDriver();
-		baseUrl = "https://www.google.com/";
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
-		driver.manage().window().maximize();
-		driver.manage().deleteAllCookies();
-		js = (JavascriptExecutor) driver;
-		a1 = new Actions(driver);
-		// driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
-
-	}
-
+public class CRMtestClass extends ParentClass {
+	
 	@Test(description = "Owner: pv_test")
 	//@Parameters("ownerName")
 	public void crmTest1() throws Exception {
@@ -115,6 +72,8 @@ public class CRMtestClass {
 		  System.out.println("after screenshot2");
 		//-----
 		  verifyTextNotPresent("verification code");
+		  Thread.sleep(3000);
+		  Reporter.log("CRM TEST1 GOT COMPLETED");
 		 
 		
 		} catch (Exception e) {
@@ -787,14 +746,7 @@ public class CRMtestClass {
 	// driver.close();
 	// }
 
-	@AfterClass(alwaysRun = true)
-	public void tearDown() throws Exception {
-		driver.quit();
-		String verificationErrorString = verificationErrors.toString();
-		if (!"".equals(verificationErrorString)) {
-			fail(verificationErrorString);
-		}
-	}
+
 	/*
 	 * private boolean isElementPresent(By by) { try { driver.findElement(by);
 	 * return true; } catch (NoSuchElementException e) { return false; } }
@@ -2349,76 +2301,4 @@ public class CRMtestClass {
 		 * finally { driver.quit(); }
 		 */
 	}
-
-	public static void scrollToElement(WebDriver driver, WebElement element) {
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].scrollIntoView(true);", element);
-	}
-
-	
-    public void verifyTextNotPresent(String s) {
-  
-        // Text to verify
-        String expectedText = s; 
-
-        // Use WebDriverWait to ensure the page is fully loaded
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(120));
-        WebElement bodyElement = wait.until(ExpectedConditions.presenceOfElementLocated(By.tagName("body")));
-
-        // Verify if the text is present in the body element
-        boolean isTextPresent = bodyElement.getText().contains(expectedText);
-
-        // Assert that the text is found
-       // Assert.assertTrue(isTextPresent, "ASSERT SAYS - TEXT PRESENT1" +expectedText);
-        Assert.assertFalse(isTextPresent, "assert - ASSERT FALSE CHECK --> "  +isTextPresent + "--> ");
-        //Assert.assertEquals(isTextPresent, isTextPresent, expectedText);
-        // Log result
-        if (isTextPresent) {
-            System.out.println("if - ASSERT FALSE CHECK --> "  +isTextPresent + "--> ");
-            Reporter.log("if - REPORTER - ASSERT FALSE CHECK"  +isTextPresent);
-        }
-        else
-        {System.out.println("else - ASSERT FALSE CHECK"  +isTextPresent);
-        Reporter.log("else - REPORTER - ASSERT FALSE CHECK"  +isTextPresent);}
-    }
-    
-    
-    
-    public void verifyTextPresent(String s) {
-    	  
-    	  
-        // Text to verify
-        String expectedText = s; 
-
-        // Use WebDriverWait to ensure the page is fully loaded
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(120));
-        WebElement bodyElement = wait.until(ExpectedConditions.presenceOfElementLocated(By.tagName("body")));
-
-        // Verify if the text is present in the body element
-        boolean isTextPresent = bodyElement.getText().contains(expectedText);
-
-        // Assert that the text is found
-       // Assert.assertTrue(isTextPresent, "ASSERT SAYS - TEXT PRESENT1" +expectedText);
-        Assert.assertTrue(isTextPresent, "assert - ASSERT TRUE CHECK --> "  +isTextPresent + "--> ");
-        //Assert.assertEquals(isTextPresent, isTextPresent, expectedText);
-        // Log result
-        if (isTextPresent) {
-            System.out.println("if - ASSERT TRUE CHECK"  +isTextPresent);
-            Reporter.log("if - REPORTER - ASSERT TRUE CHECK"  +isTextPresent);
-        }
-        else
-        {System.out.println("else - ASSERT TRUE CHECK"  +isTextPresent);
-        Reporter.log("else - REPORTER - ASSERT TRUE CHECK"  +isTextPresent);}
-        }
-    
-    
-    
-	
-	public static void waitForPageToLoad(WebDriver driver) {
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		org.openqa.selenium.support.ui.WebDriverWait wait = new org.openqa.selenium.support.ui.WebDriverWait(driver,
-				Duration.ofSeconds(120));
-		wait.until(driver1 -> js.executeScript("return document.readyState").equals("complete"));
-	}
-
 }

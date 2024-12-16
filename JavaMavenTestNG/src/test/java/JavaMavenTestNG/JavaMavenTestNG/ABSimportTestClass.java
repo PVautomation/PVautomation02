@@ -11,6 +11,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
@@ -25,10 +26,10 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 
 
-public class ABSimportTestClass extends CRMtestClass  {
+public class ABSimportTestClass extends ParentClass  {
 	@Test(description = "Owner: pv_test")
   @Parameters("ownerName")
-  public void test1() throws InterruptedException, IOException {
+  public void ABSimportTest() throws InterruptedException, IOException {
 	  //Test1 t = new Test1();
 	  //t.setup();
 	  driver.get("https://secure-test.republicfinance.com/apps/account/login");
@@ -38,10 +39,10 @@ public class ABSimportTestClass extends CRMtestClass  {
 	  username.sendKeys("pv12324a01@yopmail.com");
 	  password.sendKeys("P@ssword123");
 	  login.click();
-	  Thread.sleep(20000);
-	  driver.navigate().refresh();
+	  //Thread.sleep(20000);
+	  //driver.navigate().refresh();
 	  Thread.sleep(50000);
-	  verifyTextPresent("Funding Details");
+	  verifyTextPresent("Account Number: 9-106032-79875");
 	  /*
 	  WebElement expected = driver.findElement(By.xpath("//*[text()='Account Summary']"));
 	  if(expected.isDisplayed())
@@ -50,6 +51,7 @@ public class ABSimportTestClass extends CRMtestClass  {
 	  Assert.assertTrue(expected.isDisplayed());
 	  */
 	  Thread.sleep(3000);
+	  Reporter.log("ABS IMPORT GOT COMPLETED");
 	  System.out.println("test1 outside assert condition");
 	  File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 	//String path = System.getProperty("user.dir") + "/screenshot.png"; // Save relative to the project root
