@@ -30,7 +30,7 @@ import org.apache.commons.io.FileUtils;
 
 
 //@TestOwner("pvenkatarajan@republicfinance.com")
-public class Test1 {
+public class CRMtestClass {
 	public WebDriver driver;
 	private String baseUrl;
 	// private boolean acceptNextAlert = true;
@@ -75,8 +75,8 @@ public class Test1 {
 
 	}
 
-	@Test
-	@Parameters("ownerName")
+	@Test(description = "Owner: pv_test")
+	//@Parameters("ownerName")
 	public void crmTest1() throws Exception {
 
 		try {

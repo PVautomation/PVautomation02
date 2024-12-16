@@ -1,7 +1,7 @@
 ///*
 package JavaMavenTestNG.JavaMavenTestNG;
 
-import JavaMavenTestNG.JavaMavenTestNG.Test1;
+import JavaMavenTestNG.JavaMavenTestNG.CRMtestClass;
 import JavaMavenTestNG.JavaMavenTestNG.ScreenshotUtility;
 import org.testng.ITestContext;
 import org.openqa.selenium.WebDriver;
@@ -13,7 +13,7 @@ import org.testng.Reporter;
 
 import java.io.IOException;
 
-public class ScreenshotListener extends Test1 implements ITestListener {
+public class ScreenshotListener extends CRMtestClass implements ITestListener {
 
      //WebDriver driver;
 

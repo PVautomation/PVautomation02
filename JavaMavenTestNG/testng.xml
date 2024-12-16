@@ -10,7 +10,7 @@
   <test  name="Test">
     <classes>
    <!-- -->
-<class name="JavaMavenTestNG.JavaMavenTestNG.NewTest">
+<class name="JavaMavenTestNG.JavaMavenTestNG.ABSimportTestClass">
 <methods>
     <include name="test1" />
  <include name="test2" />   
@@ -18,7 +18,7 @@
    </methods>
 </class>
 
-    <class name="JavaMavenTestNG.JavaMavenTestNG.Test1">
+    <class name="JavaMavenTestNG.JavaMavenTestNG.CRMtestClass">
       <methods>
 <include name="crmTest1" />
       </methods>

@@ -61,42 +61,42 @@
 ]]>
     </line>
   </reporter-output>
-  <suite started-at="2024-12-13T22:42:13 CST" name="Suite" finished-at="2024-12-13T22:44:55 CST" duration-ms="161975">
+  <suite started-at="2024-12-15T18:21:35 CST" name="Suite" finished-at="2024-12-15T18:25:00 CST" duration-ms="204885">
     <groups>
     </groups>
-    <test started-at="2024-12-13T22:42:13 CST" name="Test" finished-at="2024-12-13T22:44:55 CST" duration-ms="161975">
-      <class name="JavaMavenTestNG.JavaMavenTestNG.NewTest">
-        <test-method is-config="true" signature="setUp(org.testng.ITestContext)[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@3f6f6701]" started-at="2024-12-13T22:42:13 CST" name="setUp" finished-at="2024-12-13T22:42:15 CST" duration-ms="1815" status="PASS">
+    <test started-at="2024-12-15T18:21:35 CST" name="Test" finished-at="2024-12-15T18:25:00 CST" duration-ms="204885">
+      <class name="JavaMavenTestNG.JavaMavenTestNG.ABSimportTestClass">
+        <test-method is-config="true" signature="setUp(org.testng.ITestContext)[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.ABSimportTestClass@3f6f6701]" started-at="2024-12-15T18:21:35 CST" name="setUp" finished-at="2024-12-15T18:21:37 CST" duration-ms="2193" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@78d39a69]]>
+                <![CDATA[org.testng.TestRunner@15f193b8]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@3f6f6701]" started-at="2024-12-13T22:42:15 CST" name="beforeClass" finished-at="2024-12-13T22:42:15 CST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.ABSimportTestClass@3f6f6701]" started-at="2024-12-15T18:21:37 CST" name="beforeClass" finished-at="2024-12-15T18:21:37 CST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@3f6f6701]" started-at="2024-12-13T22:42:15 CST" name="beforeMethod" finished-at="2024-12-13T22:42:15 CST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.ABSimportTestClass@3f6f6701]" started-at="2024-12-15T18:21:37 CST" name="beforeMethod" finished-at="2024-12-15T18:21:37 CST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="test1()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@3f6f6701]" started-at="2024-12-13T22:42:15 CST" name="test1" finished-at="2024-12-13T22:43:28 CST" duration-ms="73859" status="FAIL">
+        <test-method signature="test1()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.ABSimportTestClass@3f6f6701]" started-at="2024-12-15T18:21:37 CST" name="test1" description="Owner: pvenkatarajan@republicfinance.com" finished-at="2024-12-15T18:22:51 CST" duration-ms="73963" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[assert - ASSERT TRUE CHECKfalse expected [true] but found [false]]]>
+              <![CDATA[assert - ASSERT TRUE CHECK --> false-->  expected [true] but found [false]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: assert - ASSERT TRUE CHECKfalse expected [true] but found [false]
+              <![CDATA[java.lang.AssertionError: assert - ASSERT TRUE CHECK --> false-->  expected [true] but found [false]
 at org.testng.Assert.fail(Assert.java:99)
 at org.testng.Assert.failNotEquals(Assert.java:1037)
 at org.testng.Assert.assertTrue(Assert.java:45)
-at JavaMavenTestNG.JavaMavenTestNG.Test1.verifyTextPresent(Test1.java:2402)
-at JavaMavenTestNG.JavaMavenTestNG.NewTest.test1(NewTest.java:44)
+at JavaMavenTestNG.JavaMavenTestNG.CRMtestClass.verifyTextPresent(CRMtestClass.java:2402)
+at JavaMavenTestNG.JavaMavenTestNG.ABSimportTestClass.test1(ABSimportTestClass.java:44)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -139,15 +139,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </line>
           </reporter-output>
         </test-method> <!-- test1 -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@3f6f6701]" started-at="2024-12-13T22:43:29 CST" name="afterMethod" finished-at="2024-12-13T22:43:29 CST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.ABSimportTestClass@3f6f6701]" started-at="2024-12-15T18:22:52 CST" name="afterMethod" finished-at="2024-12-15T18:22:52 CST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@3f6f6701]" started-at="2024-12-13T22:43:29 CST" name="beforeMethod" finished-at="2024-12-13T22:43:29 CST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.ABSimportTestClass@3f6f6701]" started-at="2024-12-15T18:22:52 CST" name="beforeMethod" finished-at="2024-12-15T18:22:52 CST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="test2()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@3f6f6701]" started-at="2024-12-13T22:43:29 CST" name="test2" finished-at="2024-12-13T22:43:29 CST" duration-ms="1" status="PASS">
+        <test-method signature="test2()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.ABSimportTestClass@3f6f6701]" started-at="2024-12-15T18:22:52 CST" name="test2" description="Owner: pvenkatarajan@republicfinance.com" finished-at="2024-12-15T18:22:52 CST" duration-ms="2" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[
@@ -167,15 +167,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </line>
           </reporter-output>
         </test-method> <!-- test2 -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@3f6f6701]" started-at="2024-12-13T22:43:29 CST" name="afterMethod" finished-at="2024-12-13T22:43:29 CST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.ABSimportTestClass@3f6f6701]" started-at="2024-12-15T18:22:53 CST" name="afterMethod" finished-at="2024-12-15T18:22:53 CST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@3f6f6701]" started-at="2024-12-13T22:43:29 CST" name="beforeMethod" finished-at="2024-12-13T22:43:29 CST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="test3()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@3f6f6701]" started-at="2024-12-13T22:43:29 CST" name="test3" finished-at="2024-12-13T22:43:29 CST" duration-ms="0" status="PASS">
+        <test-method signature="test3()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.ABSimportTestClass@3f6f6701]" started-at="2024-12-15T18:22:53 CST" name="test3" description="Owner: pvenkatarajan@republicfinance.com" finished-at="2024-12-15T18:22:53 CST" duration-ms="3" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[
@@ -195,32 +191,36 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </line>
           </reporter-output>
         </test-method> <!-- test3 -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@3f6f6701]" started-at="2024-12-13T22:43:29 CST" name="afterMethod" finished-at="2024-12-13T22:43:29 CST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.ABSimportTestClass@3f6f6701]" started-at="2024-12-15T18:22:53 CST" name="beforeMethod" finished-at="2024-12-15T18:22:53 CST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.ABSimportTestClass@3f6f6701]" started-at="2024-12-15T18:22:53 CST" name="afterMethod" finished-at="2024-12-15T18:22:53 CST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@3f6f6701]" started-at="2024-12-13T22:43:29 CST" name="afterClass" finished-at="2024-12-13T22:43:29 CST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.NewTest@3f6f6701]" started-at="2024-12-13T22:43:29 CST" name="tearDown" finished-at="2024-12-13T22:43:30 CST" duration-ms="833" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.ABSimportTestClass@3f6f6701]" started-at="2024-12-15T18:22:53 CST" name="tearDown" finished-at="2024-12-15T18:22:54 CST" duration-ms="1006" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- JavaMavenTestNG.JavaMavenTestNG.NewTest -->
-      <class name="JavaMavenTestNG.JavaMavenTestNG.Test1">
-        <test-method is-config="true" signature="setUp(org.testng.ITestContext)[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.Test1@130c12b7]" started-at="2024-12-13T22:43:30 CST" name="setUp" finished-at="2024-12-13T22:43:31 CST" duration-ms="1223" status="PASS">
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.ABSimportTestClass@3f6f6701]" started-at="2024-12-15T18:22:53 CST" name="afterClass" finished-at="2024-12-15T18:22:53 CST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- JavaMavenTestNG.JavaMavenTestNG.ABSimportTestClass -->
+      <class name="JavaMavenTestNG.JavaMavenTestNG.CRMtestClass">
+        <test-method is-config="true" signature="setUp(org.testng.ITestContext)[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.CRMtestClass@121314f7]" started-at="2024-12-15T18:22:54 CST" name="setUp" finished-at="2024-12-15T18:22:57 CST" duration-ms="2323" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@78d39a69]]>
+                <![CDATA[org.testng.TestRunner@15f193b8]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="crmTest1()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.Test1@130c12b7]" started-at="2024-12-13T22:43:31 CST" name="crmTest1" finished-at="2024-12-13T22:44:53 CST" duration-ms="81613" status="PASS">
+        <test-method signature="crmTest1()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.CRMtestClass@121314f7]" started-at="2024-12-15T18:22:57 CST" name="crmTest1" description="Owner: pvenkatarajan@republicfinance.com" finished-at="2024-12-15T18:24:58 CST" duration-ms="121784" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[else - REPORTER - ASSERT FALSE CHECKfalse]]>
@@ -243,11 +243,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </line>
           </reporter-output>
         </test-method> <!-- crmTest1 -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.Test1@130c12b7]" started-at="2024-12-13T22:44:53 CST" name="tearDown" finished-at="2024-12-13T22:44:55 CST" duration-ms="1527" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.CRMtestClass@121314f7]" started-at="2024-12-15T18:24:59 CST" name="tearDown" finished-at="2024-12-15T18:25:00 CST" duration-ms="1216" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- JavaMavenTestNG.JavaMavenTestNG.Test1 -->
+      </class> <!-- JavaMavenTestNG.JavaMavenTestNG.CRMtestClass -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

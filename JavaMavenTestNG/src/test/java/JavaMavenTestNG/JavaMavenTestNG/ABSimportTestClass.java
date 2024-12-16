@@ -1,7 +1,7 @@
 
 package JavaMavenTestNG.JavaMavenTestNG;
 
-import JavaMavenTestNG.JavaMavenTestNG.Test1;
+import JavaMavenTestNG.JavaMavenTestNG.CRMtestClass;
 import java.io.File;
 import java.io.IOException;
 
@@ -25,8 +25,8 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 
 
-public class NewTest extends Test1  {
-  @Test
+public class ABSimportTestClass extends CRMtestClass  {
+	@Test(description = "Owner: pv_test")
   @Parameters("ownerName")
   public void test1() throws InterruptedException, IOException {
 	  //Test1 t = new Test1();
@@ -59,7 +59,7 @@ public class NewTest extends Test1  {
 	  System.out.println("screenshot1");
 	  }
   
-  @Test
+ @Test(description = "Owner: pv_test")
   @Parameters("ownerName")
   public void test2() {
 	  System.out.println("test2");
@@ -67,7 +67,7 @@ public class NewTest extends Test1  {
 	  Assert.assertTrue(true, "Test pass");
   }
   
-  @Test
+ @Test(description = "Owner: pv_test")
   @Parameters("ownerName")
   public void test3() {
 	  System.out.println("test3");
