@@ -18,28 +18,32 @@
    </methods>
 </class>
 -->
-
+<class name="JavaMavenTestNG.JavaMavenTestNG.LoanCalculatorTestClass"/>
+<!--
 <class name="JavaMavenTestNG.JavaMavenTestNG.OfferTestClass"/>
 <class name="JavaMavenTestNG.JavaMavenTestNG.LoanCalculatorTestClass"/>
 <class name="JavaMavenTestNG.JavaMavenTestNG.ABSimportTestClass"/>
 
+
     <class name="JavaMavenTestNG.JavaMavenTestNG.CRMtestClass">
       <methods>
 <include name="crmTest1" />
-      </methods>
-    </class>
-    </classes>
-  </test> <!-- Test -->
-</suite> <!-- Suite -->
-<!--   
+<include name="crmTest2" /> 
 <include name="crmTest02" />  
 <include name="crmTest3" />  
 <include name="crmTest4" /> 
 <include name="crmTest5" /> 
 <include name="crmTest6" /> 
+<include name="crmTest06" /> 
 <include name="crmTest7" />
-<include name="crmTest8" />
+<include name="crmTest07" />
+      </methods>
+    </class>
 -->
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
+
 
 
 <!-- crm start till send for uW - (START) -->
@@ -53,6 +57,7 @@
 <include name="crmTest6" /> 
 <include name="crmTest06" /> 
 <include name="crmTest7" />
+<include name="crmTest07" />
 -->
 
 <!-- from after-uw-approval till closingPrep-docs - (VIEW)  -->

@@ -106,18 +106,20 @@ public class ParentClass {
         // Verify if the text is present in the body element
         boolean isTextPresent = bodyElement.getText().contains(expectedText);
 
-        // Assert that the text is found
-       // Assert.assertTrue(isTextPresent, "ASSERT SAYS - TEXT PRESENT1" +expectedText);
-        Assert.assertFalse(isTextPresent, "assert - ASSERT FALSE CHECK --> "  +isTextPresent + "--> ");
-        //Assert.assertEquals(isTextPresent, isTextPresent, expectedText);
         // Log result
         if (isTextPresent) {
-            System.out.println("if - ASSERT FALSE CHECK --> "  +isTextPresent + "--> ");
-            Reporter.log("if - REPORTER - ASSERT FALSE CHECK"  +isTextPresent);
+            System.out.println("if - ASSERT FALSE CHECK" + "--> "  +isTextPresent );
+            Reporter.log("if - REPORTER - ASSERT FALSE CHECK" + "-->\t"  +isTextPresent  + "<br>");
         }
         else
-        {System.out.println("else - ASSERT FALSE CHECK"  +isTextPresent);
-        Reporter.log("else - REPORTER - ASSERT FALSE CHECK"  +isTextPresent);}
+        {System.out.println("else - ASSERT FALSE CHECK" + "--> " +isTextPresent);
+        Reporter.log("else - REPORTER - ASSERT FALSE CHECK"  + "-->\t"  +isTextPresent  + "<br>");}
+        
+        // Assert that the text is found
+       // Assert.assertTrue(isTextPresent, "ASSERT SAYS - TEXT PRESENT1" +expectedText);
+        Assert.assertFalse(isTextPresent, "assert - ASSERT FALSE CHECK" + "--> " +isTextPresent  + "<br>");
+        //Assert.assertEquals(isTextPresent, isTextPresent, expectedText);
+
     }
     
     
@@ -134,19 +136,20 @@ public class ParentClass {
 
         // Verify if the text is present in the body element
         boolean isTextPresent = bodyElement.getText().contains(expectedText);
-
-        // Assert that the text is found
-       // Assert.assertTrue(isTextPresent, "ASSERT SAYS - TEXT PRESENT1" +expectedText);
-        Assert.assertTrue(isTextPresent, "assert - ASSERT TRUE CHECK --> "  +isTextPresent + "--> ");
-        //Assert.assertEquals(isTextPresent, isTextPresent, expectedText);
-        // Log result
+        
         if (isTextPresent) {
-            System.out.println("if - ASSERT TRUE CHECK"  +isTextPresent);
-            Reporter.log("if - REPORTER - ASSERT TRUE CHECK"  +isTextPresent);
+            System.out.println("if - ASSERT TRUE CHECK" + "--> "  +isTextPresent );
+            Reporter.log("if - REPORTER - ASSERT TRUE CHECK" + "-->\t"  +isTextPresent + "<br>");
         }
         else
-        {System.out.println("else - ASSERT TRUE CHECK"  +isTextPresent);
-        Reporter.log("else - REPORTER - ASSERT TRUE CHECK"  +isTextPresent);}
+        {System.out.println("else - ASSERT TRUE CHECK" + "--> " +isTextPresent);
+        Reporter.log("else - REPORTER - ASSERT TRUE CHECK"  + "-->\t"  +isTextPresent + "<br>");}
+        
+        // Assert that the text is found
+       // Assert.assertTrue(isTextPresent, "ASSERT SAYS - TEXT PRESENT1" +expectedText);
+         Assert.assertTrue(isTextPresent, "assert - ASSERT TRUE CHECK" + "--> " +isTextPresent + "<br>");
+        //Assert.assertEquals(isTextPresent, isTextPresent, expectedText);
+        // Log result
         }
     
     

@@ -1,52 +1,78 @@
-///*
 package JavaMavenTestNG.JavaMavenTestNG;
 
-//import JavaMavenTestNG.JavaMavenTestNG
 import JavaMavenTestNG.JavaMavenTestNG.ScreenshotUtility;
+import JavaMavenTestNG.JavaMavenTestNG.ParentClass;
 import org.testng.ITestContext;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 import org.testng.Reporter;
 
-
-
 import java.io.IOException;
 
-public class ScreenshotListener extends ParentClass implements ITestListener {
+public class ScreenshotListener implements ITestListener {
 
-     //WebDriver driver;
+    private WebDriver driver;
 
-    
     @Override
     public void onTestFailure(ITestResult result) {
-         driver = (WebDriver) result.getTestContext().getAttribute("driver");
+        driver = (WebDriver) result.getTestContext().getAttribute("driver");
 
         try {
-            String screenshotPath = ScreenshotUtility.captureScreenshot(driver, result.getName());
-            		//captureScreenshot(driver, result.getName());
-            Reporter.log("<a href='" + screenshotPath + "' target='_blank'>Screenshot</a>\n");
-            Reporter.log("REPORTER for fail in listner1\n");
+            // Update test name dynamically with identifier
+            Object[] parameters = result.getParameters();
+            String identifier = parameters.length > 0 ? parameters[0].toString() : "unknown";
+            String newTestName = result.getMethod().getMethodName() + " [" + identifier + "]";
+            result.getTestContext().getCurrentXmlTest().setName(newTestName);
+            System.out.println("Updated test name: " + newTestName);
+
+            // Capture and log screenshot
+            String screenshotPath = ScreenshotUtility.captureScreenshot(driver, newTestName + "_FAILURE");
+            Reporter.log("<a href='" + screenshotPath + "' target='_blank'>Screenshot</a>");
+            Reporter.log("Screenshot saved for failed test: " + newTestName + " -> " + screenshotPath);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-    
 
     @Override
     public void onTestSuccess(ITestResult result) {
-             driver = (WebDriver) result.getTestContext().getAttribute("driver");
+        driver = (WebDriver) result.getTestContext().getAttribute("driver");
 
         try {
-            String screenshotPath = ScreenshotUtility.captureScreenshot(driver, result.getName());
-            Reporter.log("\n");
-            Reporter.log("<a href='" + screenshotPath + "' target='_blank'>Screenshot</a>\n");
-            Reporter.log("\n");
-            Reporter.log("REPORTER for pass in listner1\n");
+            // Update test name dynamically with identifier
+            Object[] parameters = result.getParameters();
+            String identifier = parameters.length > 0 ? parameters[0].toString() : "unknown";
+            String newTestName = result.getMethod().getMethodName() + " [" + identifier + "]";
+            result.getTestContext().getCurrentXmlTest().setName(newTestName);
+            System.out.println("Updated test name: " + newTestName);
+
+            // Capture and log screenshot
+            String screenshotPath = ScreenshotUtility.captureScreenshot(driver, newTestName + "_SUCCESS");
+            Reporter.log("<a href='" + screenshotPath + "' target='_blank'>Screenshot</a>");
+            Reporter.log("Screenshot saved for successful test: " + newTestName + " -> " + screenshotPath);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
+    @Override
+    public void onTestSkipped(ITestResult result) {
+        // Optionally handle skipped tests if needed
+    }
+
+    @Override
+    public void onStart(ITestContext context) {
+        // Optionally handle test start if needed
+    }
+
+    @Override
+    public void onFinish(ITestContext context) {
+        // Optionally handle test finish if needed
+    }
+
+    @Override
+    public void onTestStart(ITestResult result) {
+        // Optionally handle test start if needed
+    }
 }
-//*/

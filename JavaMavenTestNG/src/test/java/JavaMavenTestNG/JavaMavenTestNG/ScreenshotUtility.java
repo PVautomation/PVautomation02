@@ -1,31 +1,22 @@
 package JavaMavenTestNG.JavaMavenTestNG;
 
-//import JavaMavenTestNG.JavaMavenTestNG.Test1;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.io.FileHandler;
+import org.apache.commons.io.FileUtils;
 import java.io.File;
 import java.io.IOException;
-import org.apache.commons.io.FileUtils;
 
-public class ScreenshotUtility extends ParentClass  {
-	
-	/*
-    public static String captureScreenshot(WebDriver driver, String testName) throws IOException {
-    
-        TakesScreenshot ts = (TakesScreenshot) driver;
-        File source = ts.getScreenshotAs(OutputType.FILE);
-        
-        String dest = System.getProperty("user.dir") + "/screenshots/" + testName + ".png";
-        
-       File destination = new File(dest);
-        FileHandler.copy(source, destination);
-        
-        return dest; 
-    } */
-	
-	public static String captureScreenshot(WebDriver driver, String testName) throws IOException {
+public class ScreenshotUtility {
+
+    /**
+     * Captures a screenshot and saves it to a specified directory. Handles both local and CI/CD environments.
+     * 
+     * @param driver   The WebDriver instance used for taking the screenshot.
+     * @param identifier A unique identifier for the screenshot, typically the test name.
+     * @return The absolute path of the saved screenshot, or null if an error occurred.
+     */
+    public static String captureScreenshot(WebDriver driver, String identifier) throws IOException {
         try {
             // Take a screenshot
             File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
@@ -43,7 +34,7 @@ public class ScreenshotUtility extends ParentClass  {
             }
 
             // Define the destination file
-            String destPath = artifactDir + "/" + testName + ".png";
+            String destPath = artifactDir + "/screenshot_" + identifier + ".png";
             File destination = new File(destPath);
 
             // Copy the screenshot to the destination
@@ -58,5 +49,4 @@ public class ScreenshotUtility extends ParentClass  {
             return null; // Return null if there was an error
         }
     }
-
 }

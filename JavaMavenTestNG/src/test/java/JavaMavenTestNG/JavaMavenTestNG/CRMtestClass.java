@@ -32,6 +32,8 @@ import org.apache.commons.io.FileUtils;
 //@TestOwner("pvenkatarajan@republicfinance.com")
 public class CRMtestClass extends ParentClass {
 	
+	WebDriverWait wait8;
+	
 	@Test(description = "Owner: pv_test")
 	//@Parameters("ownerName")
 	public void crmTest1() throws Exception {
@@ -455,10 +457,10 @@ public class CRMtestClass extends ParentClass {
 		
 		
 		try {
-			WebElement element3 = driver.findElement(By.xpath("(//omnistudio-flex-action[contains(@class, 'flexActionElement')]//a[contains(@class, 'slds-action_item')])[77]"));
+			WebElement element3 = driver.findElement(By.xpath("(//omnistudio-flex-action[contains(@class, 'flexActionElement')]//a[contains(@class, 'slds-action_item')])[80]"));
 			//WebElement element3 = driver.findElement(By.xpath("(//omnistudio-flex-action[contains(@class, 'flexActionElement')]//a[contains(@class, 'slds-action_item')])[15]"));		
 			
-			WebDriverWait wait3 = new WebDriverWait(driver, Duration.ofSeconds(40));
+			WebDriverWait wait3 = new WebDriverWait(driver, Duration.ofSeconds(60));
 			wait3.until(ExpectedConditions.elementToBeClickable(element3));
 
 			JavascriptExecutor js3 = (JavascriptExecutor) driver;
@@ -1627,24 +1629,29 @@ public class CRMtestClass extends ParentClass {
 			// kkkkkkkkkkkkkkkkkkk
 
 			//Thread.sleep(25000);
-			WebDriverWait wait8 = new WebDriverWait(driver, Duration.ofSeconds(180));
-/*  //PROPERTY CHECKBOX START
+			wait8 = new WebDriverWait(driver, Duration.ofSeconds(180));
+  //PROPERTY CHECKBOX START
+			try {
 			WebElement e10 = driver.findElement(By.xpath("(//input[@type='checkbox'])[2]"));
+			//(//input[@type='checkbox'])[58]
 			// p[text()='Tell me about any unsatisfied judgments you may have, if
 			// applicable.']"));
 			js.executeScript("arguments[0].scrollIntoView(true);", e10);
 			wait8.until(ExpectedConditions.elementToBeClickable(e10));
 			// JavascriptExecutor js8 = (JavascriptExecutor) driver;
 			js.executeScript("arguments[0].click();", e10);
-
+			System.out.println("CHECKBOX - in checkbox try after click");
 			Thread.sleep(40000);
+			}catch(Exception e)
+			{System.out.println("CHECKBOX - fell into checkbox catch");}
 //PROPERTY CHECKBOX END			
- */
+ 
 			
-			System.out.println("Waiting for page to fully load. - crmTest7 STARTED n clicked on CHECKBOX");
+			System.out.println("CHECKBOX - came out of checkbox try catch");
 			waitForPageToLoad(driver);
 
-			WebElement e8 = driver.findElement(By.xpath("(//*[text()='KY Conventional'])[2]")); 
+			WebElement e8 = driver.findElement(By.xpath("(//*[text()='Select Loan Class'])[2]"));
+					//(//*[text()='KY Conventional'])[2]")); 
 		//REPLACE THIS XPATH ---> //driver.findElement(By.xpath("(//*[text()='Select Loan Class'])[2]"));
 			
 			// p[text()='Tell me about any unsatisfied judgments you may have, if
@@ -1688,7 +1695,9 @@ public class CRMtestClass extends ParentClass {
 			Thread.sleep(20000);
 			
 			if(driver.findElement(By.xpath("(//*[text()='Please include at least one collateral entry in this offer'])[2]")).isDisplayed())
-			{System.out.println("MESSAGE THROWN - PLEASE INCLUDE AT LEAST ONE COLLATERAL");}
+			{ throw new Exception("EXCEPTION - MESSAGE DISPLAYED - Please include at least one collateral");
+				//System.out.println("MESSAGE THROWN - PLEASE INCLUDE AT LEAST ONE COLLATERAL");
+			}
 			Thread.sleep(5000);
 			
 			WebElement e11 = driver.findElement(By.xpath("(//button[contains(text(), 'Calculate')])[2]"));
@@ -1719,16 +1728,27 @@ public class CRMtestClass extends ParentClass {
 			 * js.executeScript("window.scrollTo(0, arguments[0] / 2);", documentHeight);
 			 */
 			// Thread.sleep(9000);
+		} catch (Exception e) {
+			System.out.println("caught issue during crmTest7" + e.getMessage());
+		}
 
-			Thread.sleep(3000);
+	}
+	
+
+	@Test
+			public void crmTest07() throws InterruptedException {
+				try {
 			System.out.println("Waiting for page to fully load. - SLEEPING 3sec- BEFORE SUBMIT START");
+			WebDriverWait wait8 = new WebDriverWait(driver, Duration.ofSeconds(120));
 			WebElement e12 = driver.findElement(By.xpath("(//button[text()='Submit'])[2]"));
 			System.out.println("Waiting for page to fully load. - SUBMIT STARTED");
 			// JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("arguments[0].scrollIntoView(true);", e12);
+			//js.executeScript("arguments[0].scrollIntoView(true);", e12);
 
 			// WebDriverWait wait8 = new WebDriverWait(driver, Duration.ofSeconds(60));
 			wait8.until(ExpectedConditions.elementToBeClickable(e12));
+			js.executeScript("arguments[0].focus();", e12);
+			Thread.sleep(3000);
 			js.executeScript("arguments[0].click();", e12);
 			waitForPageToLoad(driver);
 			System.out.println("Waiting for page to fully load. - SUBMIT CLICKED - load completed");
