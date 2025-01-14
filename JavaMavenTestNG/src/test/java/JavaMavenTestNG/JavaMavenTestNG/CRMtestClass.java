@@ -32,7 +32,7 @@ import org.apache.commons.io.FileUtils;
 //@TestOwner("pvenkatarajan@republicfinance.com")
 public class CRMtestClass extends ParentClass {
 	
-	WebDriverWait wait8;
+//	WebDriverWait wait8;
 	
 	@Test(description = "Owner: pv_test")
 	//@Parameters("ownerName")
@@ -41,55 +41,91 @@ public class CRMtestClass extends ParentClass {
 		try {
 		// through direct crm site
 		driver.get("https://republicfinance--qa.sandbox.my.salesforce.com/");
-		Thread.sleep(5000);
+		//Thread.sleep(5000);
 		System.out.println("svc acct getURL done");
 		// ERROR: Caught exception [ERROR: Unsupported command [windowMaximize | | ]]
-		driver.findElement(By.id("username")).click();
+		new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.elementToBeClickable(By.id("username"))).click();
 		driver.findElement(By.id("username")).clear();
 		driver.findElement(By.id("username")).sendKeys("svcQSETA@republicfinance.com.qa");
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 		System.out.println("svc acct uid done");
-		driver.findElement(By.id("password")).click();
+		new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.elementToBeClickable(By.id("password"))).click();
+		//driver.findElement(By.id("password")).click();
 		driver.findElement(By.id("password")).clear();
 		driver.findElement(By.id("password")).sendKeys("-tEp66BWR#F#P*");
-		Thread.sleep(10000);
+		//Thread.sleep(10000);
 		System.out.println("svc acct pwd done");
 		WebElement login = driver.findElement(By.id("Login"));
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
-		wait.until(ExpectedConditions.elementToBeClickable(login));
+		new WebDriverWait(driver, Duration.ofSeconds(60)).until(ExpectedConditions.elementToBeClickable(login));
 		JavascriptExecutor js0 = (JavascriptExecutor) driver;
 		js0.executeScript("arguments[0].focus();", login);
 		js0.executeScript("arguments[0].click();", login);
 		System.out.println("svc acct login click done");
-		Thread.sleep(15000);
+		//Thread.sleep(15000);
 		
 		//-----
-		  Thread.sleep(3000);
+		 // Thread.sleep(3000);
 		  System.out.println("before screeshot2");
 		  File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		//String path = System.getProperty("user.dir") + "/screenshot.png"; // Save relative to the project root
 		String path = System.getenv("Build.ArtifactStagingDirectory") + "/screenshot2.png";
 		FileUtils.copyFile(screenshot, new File(path));
-		Thread.sleep(3000);
+		//Thread.sleep(3000);
 		  System.out.println("after screenshot2");
 		//-----
-		  verifyTextNotPresent("verification code");
-		  Thread.sleep(3000);
+		  
+		  //============
+	        String expectedText = "Please check your username and password."; 
+
+	        // Use WebDriverWait to ensure the page is fully loaded
+	        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+	        WebElement bodyElement = wait.until(ExpectedConditions.presenceOfElementLocated(By.tagName("body")));
+
+	        // Verify if the text is present in the body element
+	        boolean isTextPresent = bodyElement.getText().contains(expectedText);
+		  //============
+		  
+		  
+			//Please check your username and password. If you still can't log in, contact your Salesforce administrator.
+			if(isTextPresent)
+			{ throw new Exception("----> " + "Please check your username and password - SO THROWN INTO CATCH1");
+				//System.out.println("MESSAGE THROWN - PLEASE INCLUDE AT LEAST ONE COLLATERAL");
+			}
+			Thread.sleep(5000);
+			
+			
+			  if(verifyTextNotPresent("verification code"))
+				{ throw new Exception("----> " + "VERIFICATION CODE REQUIRED - SO THROWN INTO CATCH1");
+					//System.out.println("MESSAGE THROWN - PLEASE INCLUDE AT LEAST ONE COLLATERAL");
+				}
+				Thread.sleep(5000);
+			  
+			
+			
+		  //Thread.sleep(3000);
 		  Reporter.log("CRM TEST1 GOT COMPLETED");
 		 
 		
 		} catch (Exception e) {
+
 			System.out.println("CRM-TEST1 LOGIN CLICK CATCH");
+			/*
 			//-----
-			  Thread.sleep(3000);
+			 // Thread.sleep(3000);
 			  System.out.println("before screenshot3");
 			  File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 			//String path = System.getProperty("user.dir") + "/screenshot.png"; // Save relative to the project root
 			String path = System.getenv("Build.ArtifactStagingDirectory") + "/screenshot3.png";
 			FileUtils.copyFile(screenshot, new File(path));
-			Thread.sleep(3000);
+			//Thread.sleep(3000);
 			  System.out.println(" after screenshot3");
 			//-----
+		
+			 */
+				System.out.println("VERIFICATION CODE REQUIRED - SO THROWN INTO CATCH2" + e.getMessage());
+				Reporter.log(e.getMessage() + "<br>");
+				Assert.fail(e.getMessage() + "<br>");
+		
 		}
 
 		
@@ -125,29 +161,32 @@ public class CRMtestClass extends ParentClass {
 		 * driver.switchTo().window(w1); // THROUGN OKTA END
 		 */
 		System.out.println("came outside crm login try catch");
-		Thread.sleep(20000);
+		//Thread.sleep(20000);
 		waitForPageToLoad(driver);
 		System.out.println("Waiting for page to fully load.");
 		//-----
-		  Thread.sleep(3000);
+		 // Thread.sleep(3000);
 		  System.out.println("before screenshot4");
 		  File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		//String path = System.getProperty("user.dir") + "/screenshot.png"; // Save relative to the project root
 		String path = System.getenv("Build.ArtifactStagingDirectory") + "/screenshot4.png";
 		FileUtils.copyFile(screenshot, new File(path));
-		Thread.sleep(3000);
+		//Thread.sleep(3000);
 		  System.out.println(" after screenshot4");
 		//-----
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 		// driver.findElement(By.xpath("//*[@id=\"oneHeader\"]/div[2]/span/div[2]/ul/li[2]")).click();
 
 		// ((JavascriptExecutor)
 		// (driver)).executeScript("arguments[0].scrollIntoView(true)",
 		// driver.findElement(By.xpath("//*[@id=\"oneHeader\"]/div[2]/span/div[2]/ul/li[2]")));
 		// Thread.sleep(3000);
-		((JavascriptExecutor) driver).executeScript("arguments[0].click();", driver.findElement(By.xpath(
-				"/html/body/div[4]/div[1]/section/header/div[2]/span/div[2]/ul/li[2]/div/div/div[1]/div/div/a/div/lightning-icon/span/lightning-primitive-icon")));
-		Thread.sleep(8000);
+		WebElement elt001 = driver.findElement(By.xpath(
+				"/html/body/div[4]/div[1]/section/header/div[2]/span/div[2]/ul/li[2]/div/div/div[1]/div/div/a/div/lightning-icon/span/lightning-primitive-icon"));
+		new WebDriverWait(driver, Duration.ofSeconds(60)).until(ExpectedConditions.elementToBeClickable(elt001));
+		((JavascriptExecutor) driver).executeScript("arguments[0].click();", elt001);
+		//Thread.sleep(8000);
+		//new WebDriverWait(driver, Duration.ofSeconds(180))
 
 		/*
 		 * crmtest1 start
@@ -239,7 +278,8 @@ public class CRMtestClass extends ParentClass {
 	// }
 
 	@Test
-	@Parameters("ownerName")
+	//(dependsOnMethods = "crmTest1")
+	//@Parameters("ownerName")
 	public void crmTest2() throws Exception {
 
 		driver.navigate().refresh();
@@ -247,20 +287,21 @@ public class CRMtestClass extends ParentClass {
 		waitForPageToLoad(driver);
 		System.out.println("Waiting for page to fully load.");
 		js.executeScript("window.scroll(0,0);");
-		Thread.sleep(8000);
+		//Thread.sleep(3000);
 
 		try {
 			// Thread.sleep(3000);
-			((JavascriptExecutor) driver).executeScript("arguments[0].click();",
-					driver.findElement(By.xpath("//*[@title= 'Branch Operations']")));
-			Thread.sleep(3000);
+			WebElement bo1 = driver.findElement(By.xpath("//*[@title= 'Branch Operations']"));
+			new WebDriverWait(driver, Duration.ofSeconds(60)).until(ExpectedConditions.elementToBeClickable(bo1));
+			((JavascriptExecutor) driver).executeScript("arguments[0].click();", bo1);
+			//Thread.sleep(3000);
 			System.out.println("clicked on branch operations");
 		} catch (Exception e) {
 			// Assert.assertTrue(false, "Test fail");
 			System.out.println("unable to click on branch operations");
 		}
 
-		Thread.sleep(8000);
+		//Thread.sleep(8000);
 		WebElement element = null;
 		try {
 			element = driver.findElement(By.xpath("//button[@aria-label='Search']"));
@@ -286,20 +327,21 @@ public class CRMtestClass extends ParentClass {
 		 */
 
 		try {
-			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
 			wait.until(ExpectedConditions.elementToBeClickable(element));
 
 			JavascriptExecutor js0 = (JavascriptExecutor) driver;
+				js0.executeScript("arguments[0].focus();", element);
 			js0.executeScript("arguments[0].click();", element);
 
 			// JavascriptExecutor js1 = (JavascriptExecutor) driver;
-			js0.executeScript("arguments[0].focus();", element);
+		
 
-			Thread.sleep(5000);
+			//Thread.sleep(5000);
 			Actions actions = new Actions(driver);
 			actions.sendKeys(element, "MARTHA YYCPXHA").sendKeys(Keys.ENTER).perform();
 			//actions.sendKeys(element, "JENNIFER FRCZL").sendKeys(Keys.ENTER).perform();
-			Thread.sleep(5000);
+			//Thread.sleep(5000);
 			// element.sendKeys(Keys.ENTER);
 		} catch (Exception e) {
 			System.out.println("NOT clicked searchbox and pressed enter and sleep 5");
@@ -390,7 +432,7 @@ public class CRMtestClass extends ParentClass {
 		// Thread.sleep(2000);
 		// *[@id='276:0']
 
-		driver.navigate().refresh();
+		//driver.navigate().refresh();
 		// driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
 		waitForPageToLoad(driver);
 		System.out.println("Waiting for page to fully load.");
@@ -470,7 +512,7 @@ public class CRMtestClass extends ParentClass {
 			System.out.println("VIEW xpath not found n clicked - CATCH ");
 		}
 		
-		Thread.sleep(50000);
+		//Thread.sleep(50000);
 		System.out.println("Waiting for page to fully load. - WAITING FOR 'VIEW' TO JUMP TO APPROVED PAGE - after try");
 	}
 		
@@ -491,6 +533,7 @@ public class CRMtestClass extends ParentClass {
 	@Test
 	public void crmTest02() throws Exception {
 
+/*
 		List<String> xPaths1 = Arrays.asList("//div[@class='slds-col condition-element']//span[@title='Start']",
 				"//div[contains(@class, 'slds-col') and contains(@class, 'condition-element')]//a[@aria-label='Start']//span[@title='Start']",
 				"//div[contains(@class, 'block-container')]//span[@title='Start']"
@@ -521,6 +564,12 @@ public class CRMtestClass extends ParentClass {
 			System.out.println(
 					"start button find - ArrayList - No element3 found with any of the provided list of XPaths.");
 		}
+		*/
+		
+		WebElement strt1 = driver.findElement(By.xpath("//div[contains(@class, 'slds-col') and contains(@class, 'condition-element')]//a[@aria-label='Start']//span[@title='Start']"));
+		new WebDriverWait(driver, Duration.ofSeconds(120)).until(ExpectedConditions.elementToBeClickable(strt1));
+((JavascriptExecutor) driver).executeScript("arguments[0].click();", strt1);
+
 
 		// driver.findElement(By.xpath("(//span[@title='Start'][normalize-space()='Start'])[3]")).click();
 		// Thread.sleep(9000);
@@ -538,7 +587,7 @@ public class CRMtestClass extends ParentClass {
 		// ((JavascriptExecutor)driver).executeScript("arguments[0].click();",
 		// driver.findElement(By.xpath("/html/body/div[4]/div[1]/section/div[1]/div/div[2]/div[2]/section[1]/div/div/section[2]/div/div[2]/div/div/div/c-r-f-k-y-c-details-english/div/article/div[2]/omnistudio-omniscript-step[2]")));
 
-		Thread.sleep(25000);
+		//Thread.sleep(25000);
 		// wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("//*[@id='input2-1082']"))));
 		// ((JavascriptExecutor)driver).executeScript("arguments[0].click();",
 		// driver.findElement(By.xpath("//*[@id='input2-1082']")));
@@ -546,9 +595,11 @@ public class CRMtestClass extends ParentClass {
 		// 88888888 test2 DIVIDE 88888888888
 
 		try {
-			driver.findElement(By.xpath(
-					"//*[text()='New Application' and contains(@class, 'slds-page-header__title slds-p-horizontal_medium slds-text-heading--medium slds-m-top_medium os-step-label')]"))
-					.click();
+			WebElement ee1 = driver.findElement(By.xpath(
+					"//*[text()='New Application' and contains(@class, 'slds-page-header__title slds-p-horizontal_medium slds-text-heading--medium slds-m-top_medium os-step-label')]"));
+					new WebDriverWait(driver, Duration.ofSeconds(60)).until(ExpectedConditions.elementToBeClickable(ee1));
+((JavascriptExecutor) driver).executeScript("arguments[0].click();", ee1);
+
 			System.out.println("new-application text clicked -before frame1");
 		} catch (Exception e) {
 			System.out.println("new-application text not clicked -before frame1");
@@ -609,10 +660,12 @@ public class CRMtestClass extends ParentClass {
 		 * js.executeScript("window.scroll(0,0);"); Thread.sleep(3000);
 		 */
 
-		Thread.sleep(20000);
-		driver.findElement(By.xpath(
-				"//h3[text()='Please verify the information below is correct, update any incorrect/outdated information & fill in any additional fields.']"))
-				.click();
+		//Thread.sleep(20000);
+		WebElement ee02 = driver.findElement(By.xpath(
+				"//h3[text()='Please verify the information below is correct, update any incorrect/outdated information & fill in any additional fields.']"));
+				new WebDriverWait(driver, Duration.ofSeconds(120)).until(ExpectedConditions.elementToBeClickable(ee02));
+((JavascriptExecutor) driver).executeScript("arguments[0].click();", ee02);
+
 
 		a1.sendKeys(Keys.TAB).perform();
 		Thread.sleep(1000);
@@ -655,27 +708,29 @@ public class CRMtestClass extends ParentClass {
 		}
 		Thread.sleep(500);
 		a1.sendKeys(Keys.ENTER).perform();
-		Thread.sleep(10000);
+		//Thread.sleep(10000);
 
 		try {
-			driver.findElement(By.xpath(
-					"(//*[contains(text(), 'By submitting the information in this application for credit')]/preceding-sibling::span[@class='slds-checkbox_faux'])[1]"))
-					.click();
-			Thread.sleep(20000);
+			WebElement ee03 = driver.findElement(By.xpath(
+					"(//*[contains(text(), 'By submitting the information in this application for credit')]/preceding-sibling::span[@class='slds-checkbox_faux'])[1]"));
+					new WebDriverWait(driver, Duration.ofSeconds(60)).until(ExpectedConditions.elementToBeClickable(ee03));
+((JavascriptExecutor) driver).executeScript("arguments[0].click();", ee03);
+
+			//Thread.sleep(20000);
 			System.out.println("test3 checkbox done");
 
-			Thread.sleep(3000);
+			//Thread.sleep(3000);
 			WebElement e8 = driver.findElement(By.xpath("(//span[text()='Next'])[1]"));
 			System.out.println("ssn next STARTED");
 			JavascriptExecutor js = (JavascriptExecutor) driver;
+			new WebDriverWait(driver, Duration.ofSeconds(120)).until(ExpectedConditions.elementToBeClickable(e8));
 			js.executeScript("arguments[0].scrollIntoView(true);", e8);
 
-			WebDriverWait wait8 = new WebDriverWait(driver, Duration.ofSeconds(120));
-			wait8.until(ExpectedConditions.elementToBeClickable(e8));
+
 			js.executeScript("arguments[0].click();", e8);
 			// Thread.sleep(3000);
 			// driver.findElement(By.xpath("(//*[contains(text(), 'Next')])[3]")).click();
-			Thread.sleep(10000);
+			//Thread.sleep(10000);
 			System.out.println("test3 next done");
 		} catch (Exception e) {
 			System.out.println("test3 checkbox or next caught");
@@ -718,7 +773,7 @@ public class CRMtestClass extends ParentClass {
 		 * a1.sendKeys(Keys.TAB).perform(); a1.sendKeys(Keys.ENTER).perform();
 		 */
 
-		Thread.sleep(15000);
+		//Thread.sleep(15000);
 		System.out.println("test3 sleep completed");
 
 	}
@@ -781,17 +836,17 @@ public class CRMtestClass extends ParentClass {
 			 * js.executeScript("window.scroll(0,0);"); Thread.sleep(3000);
 			 */
 
-			Thread.sleep(25000);
+			//Thread.sleep(25000);
 
 			waitForPageToLoad(driver);
 			System.out.println("Waiting for page to fully load. - crmTest4 ");
 			JavascriptExecutor js = (JavascriptExecutor) driver;
 			  js.executeScript("document.body.style.zoom='30%'"); 
-			  Thread.sleep(15000);
+			  //Thread.sleep(15000);
 				js.executeScript("window.scroll(0,0);");
-			  Thread.sleep(15000);
+			 // Thread.sleep(15000);
 			  System.out.println("Waiting for page to fully load2. - crmTest4 ");
-			  Thread.sleep(5000);
+			  //Thread.sleep(5000);
 /*
 			// HANDLE NEW INCOME ADD DROPDOWN
 			try
@@ -817,7 +872,8 @@ public class CRMtestClass extends ParentClass {
 			
 			// &&&&&&& HANDLE THE INCOME ADDITION TILE &&&&&&&&&&
 			try {
-			if(driver.findElement(By.xpath("(//*[contains(text(), 'We found an income record from the applicant(s)')])[1]")).isDisplayed())
+				WebElement ee07 = driver.findElement(By.xpath("(//*[contains(text(), 'We found an income record from the applicant(s)')])[1]"));
+			if(new WebDriverWait(driver, Duration.ofSeconds(20)).until(ExpectedConditions.elementToBeClickable(ee07)).isDisplayed())
 			{
               driver.findElement(By.xpath("(//div[contains(@class, 'slds-text-align_center') and contains(@data-style-id, 'state0element0block_element0block_element3block_element0')])[1]")).click();
               Thread.sleep(20000);
@@ -945,10 +1001,11 @@ public class CRMtestClass extends ParentClass {
 	  			a1.sendKeys(Keys.TAB).perform();
 	  			Thread.sleep(5000);
 	  			a1.sendKeys(Keys.ENTER).perform();
-	  			Thread.sleep(20000);
+	  			//Thread.sleep(20000);
 	  			waitForPageToLoad(driver);
 	  			System.out.println("VERIFY INCOME COMPLETE1");
 	  			Thread.sleep(2000);
+	  			/*
 	  			WebElement e09 = driver.findElement(By.xpath("(//*[contains(@title, 'Save')])[20]"));
 	  			//----
 				WebDriverWait wait09 = new WebDriverWait(driver, Duration.ofSeconds(160));
@@ -956,9 +1013,10 @@ public class CRMtestClass extends ParentClass {
 				js.executeScript("arguments[0].click();", e09);
 				//Thread.sleep(15000);
 	  			//----
-	  			Thread.sleep(20000);
+	  			//Thread.sleep(20000);
+				waitForPageToLoad(driver);
 	  			System.out.println("VERIFY INCOME COMPLETE2");
-	  			
+	  			*/
 			}
 			catch(Exception e)
 			{System.out.println("VERIFY INCOME CATCH");}
@@ -1107,7 +1165,7 @@ public class CRMtestClass extends ParentClass {
 			 * System.out.println("Waiting for page to fully load.");
 			 * js.executeScript("window.scroll(0,0);");
 			 */
-			Thread.sleep(50000);
+			Thread.sleep(10000);
 			System.out.println("test5 sleep completed");
 			waitForPageToLoad(driver);
 			System.out.println("test5 load completed");
@@ -1127,13 +1185,13 @@ public class CRMtestClass extends ParentClass {
 			// p[text()='Tell me about any unsatisfied judgments you may have, if
 			// applicable.']"));
 
-			WebDriverWait wait8 = new WebDriverWait(driver, Duration.ofSeconds(160));
+			WebDriverWait wait8 = new WebDriverWait(driver, Duration.ofSeconds(180));
 			wait8.until(ExpectedConditions.elementToBeClickable(e8));
 
 			js8.executeScript("arguments[0].click();", e8);
-			Thread.sleep(15000);
+			Thread.sleep(8000);
 			js8.executeScript("arguments[0].click();", e8);
-			Thread.sleep(15000);
+			Thread.sleep(8000);
 
 		} catch (NoSuchElementException e) {
 			System.out.println("Thexe of radio button-1 clicked");
@@ -1629,7 +1687,10 @@ public class CRMtestClass extends ParentClass {
 			// kkkkkkkkkkkkkkkkkkk
 
 			//Thread.sleep(25000);
-			wait8 = new WebDriverWait(driver, Duration.ofSeconds(180));
+			//wait8 = new WebDriverWait(driver, Duration.ofSeconds(180));
+			
+			
+			/*
   //PROPERTY CHECKBOX START
 			try {
 			WebElement e10 = driver.findElement(By.xpath("(//input[@type='checkbox'])[2]"));
@@ -1637,7 +1698,7 @@ public class CRMtestClass extends ParentClass {
 			// p[text()='Tell me about any unsatisfied judgments you may have, if
 			// applicable.']"));
 			js.executeScript("arguments[0].scrollIntoView(true);", e10);
-			wait8.until(ExpectedConditions.elementToBeClickable(e10));
+			new WebDriverWait(driver, Duration.ofSeconds(180)).until(ExpectedConditions.elementToBeClickable(e10));
 			// JavascriptExecutor js8 = (JavascriptExecutor) driver;
 			js.executeScript("arguments[0].click();", e10);
 			System.out.println("CHECKBOX - in checkbox try after click");
@@ -1645,6 +1706,8 @@ public class CRMtestClass extends ParentClass {
 			}catch(Exception e)
 			{System.out.println("CHECKBOX - fell into checkbox catch");}
 //PROPERTY CHECKBOX END			
+ */
+ 
  
 			
 			System.out.println("CHECKBOX - came out of checkbox try catch");
@@ -1660,23 +1723,23 @@ public class CRMtestClass extends ParentClass {
 			js.executeScript("arguments[0].scrollIntoView(true);", e8);
 
 			// WebDriverWait wait8 = new WebDriverWait(driver, Duration.ofSeconds(120));
-			wait8.until(ExpectedConditions.elementToBeClickable(e8));
+			new WebDriverWait(driver, Duration.ofSeconds(180)).until(ExpectedConditions.elementToBeClickable(e8));
 			JavascriptExecutor js8 = (JavascriptExecutor) driver;
 			js8.executeScript("arguments[0].click();", e8);
 			System.out.println("Waiting for page to fully load. - crmTest7 STARTED n clicked loan class dropdown ");
-			Thread.sleep(20000);
+			Thread.sleep(10000); // INSTEAD OF - 20K
 
 			// for(int i=1; i<14; i++) { a1.sendKeys(Keys.TAB).perform(); }
 			a1.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).perform();
 			Thread.sleep(5000);
 			a1.sendKeys(Keys.ENTER).perform();
-			Thread.sleep(30000);
+			Thread.sleep(20000); // INSTEAD OF - 30K
 			a1.sendKeys(Keys.TAB).perform();
 			Thread.sleep(2000);
 			a1.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).perform();
 			Thread.sleep(1000);
 			a1.sendKeys(Keys.ENTER).perform();
-			Thread.sleep(30000);
+			Thread.sleep(20000); // INSTEAD OF - 30K
 			a1.sendKeys(Keys.TAB).perform();
 			Thread.sleep(500);
 			a1.sendKeys("24").perform();
@@ -1695,7 +1758,7 @@ public class CRMtestClass extends ParentClass {
 			Thread.sleep(20000);
 			
 			if(driver.findElement(By.xpath("(//*[text()='Please include at least one collateral entry in this offer'])[2]")).isDisplayed())
-			{ throw new Exception("EXCEPTION - MESSAGE DISPLAYED - Please include at least one collateral");
+			{ throw new Exception("----> " + "EXCEPTION - MESSAGE DISPLAYED - 'Please include at least one collateral' - SO 'CALCULATE' & 'SUBMIT' WON'T GET ENABLED");
 				//System.out.println("MESSAGE THROWN - PLEASE INCLUDE AT LEAST ONE COLLATERAL");
 			}
 			Thread.sleep(5000);
@@ -1706,7 +1769,7 @@ public class CRMtestClass extends ParentClass {
 			js.executeScript("arguments[0].scrollIntoView(true);", e11);
 
 			// WebDriverWait wait8 = new WebDriverWait(driver, Duration.ofSeconds(60));
-			wait8.until(ExpectedConditions.elementToBeClickable(e11));
+			new WebDriverWait(driver, Duration.ofSeconds(180)).until(ExpectedConditions.elementToBeClickable(e11));
 			js.executeScript("arguments[0].click();", e11);
 
 			waitForPageToLoad(driver);
@@ -1730,12 +1793,14 @@ public class CRMtestClass extends ParentClass {
 			// Thread.sleep(9000);
 		} catch (Exception e) {
 			System.out.println("caught issue during crmTest7" + e.getMessage());
+			Reporter.log("caught issue during crmTest7" + e.getMessage() + "<br>");
+			Assert.fail("caught issue during crmTest7" + e.getMessage() + "<br>");
 		}
 
 	}
 	
 
-	@Test
+	        @Test(dependsOnMethods = "crmTest7")
 			public void crmTest07() throws InterruptedException {
 				try {
 			System.out.println("Waiting for page to fully load. - SLEEPING 3sec- BEFORE SUBMIT START");

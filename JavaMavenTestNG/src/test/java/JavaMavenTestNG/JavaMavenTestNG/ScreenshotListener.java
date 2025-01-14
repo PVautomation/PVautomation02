@@ -21,7 +21,7 @@ public class ScreenshotListener implements ITestListener {
         try {
             // Update test name dynamically with identifier
             Object[] parameters = result.getParameters();
-            String identifier = parameters.length > 0 ? parameters[0].toString() : "unknown";
+            String identifier = parameters.length > 0 ? parameters[0].toString() : "test-fail";
             String newTestName = result.getMethod().getMethodName() + " [" + identifier + "]";
             result.getTestContext().getCurrentXmlTest().setName(newTestName);
             System.out.println("Updated test name: " + newTestName);
@@ -42,7 +42,7 @@ public class ScreenshotListener implements ITestListener {
         try {
             // Update test name dynamically with identifier
             Object[] parameters = result.getParameters();
-            String identifier = parameters.length > 0 ? parameters[0].toString() : "unknown";
+            String identifier = parameters.length > 0 ? parameters[0].toString() : "test-pass";
             String newTestName = result.getMethod().getMethodName() + " [" + identifier + "]";
             result.getTestContext().getCurrentXmlTest().setName(newTestName);
             System.out.println("Updated test name: " + newTestName);

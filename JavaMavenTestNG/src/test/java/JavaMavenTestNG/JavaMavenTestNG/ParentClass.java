@@ -38,6 +38,7 @@ public class ParentClass {
 	public StringBuffer verificationErrors = new StringBuffer();
 	public JavascriptExecutor js;
 	Actions a1;
+	WebDriverWait wait;
 
 	@BeforeClass(alwaysRun = true)
 	public void setUp(ITestContext context) throws Exception {
@@ -73,6 +74,7 @@ public class ParentClass {
 		js = (JavascriptExecutor) driver;
 		a1 = new Actions(driver);
 		// driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
+		wait = new WebDriverWait(driver, Duration.ofSeconds(60));
 
 	}
 
@@ -94,7 +96,7 @@ public class ParentClass {
 	}
 
 	
-    public void verifyTextNotPresent(String s) {
+    public boolean verifyTextNotPresent(String s) {
   
         // Text to verify
         String expectedText = s; 
@@ -117,8 +119,9 @@ public class ParentClass {
         
         // Assert that the text is found
        // Assert.assertTrue(isTextPresent, "ASSERT SAYS - TEXT PRESENT1" +expectedText);
-        Assert.assertFalse(isTextPresent, "assert - ASSERT FALSE CHECK" + "--> " +isTextPresent  + "<br>");
+        //Assert.assertFalse(isTextPresent, "assert - ASSERT FALSE CHECK" + "--> " +isTextPresent  + "<br>");  ---> //REPLACE
         //Assert.assertEquals(isTextPresent, isTextPresent, expectedText);
+        return isTextPresent;
 
     }
     
