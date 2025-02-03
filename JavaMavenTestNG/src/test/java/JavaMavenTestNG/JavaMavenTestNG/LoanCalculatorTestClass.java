@@ -67,7 +67,7 @@ public class LoanCalculatorTestClass extends ParentClass  {
 		
 
 	    driver.get("https://www-test.republicfinance.com/monthly-payment-calculator");
-	    Thread.sleep(4000);
+	    Thread.sleep(8000);
 		 js.executeScript("document.body.style.zoom='30%'");
 		 js.executeScript("window.scroll(0,0);"); 
 	    driver.findElement(By.id("field-5")).click();

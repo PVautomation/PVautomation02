@@ -1,36 +1,636 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="16" passed="10" failed="6" skipped="0">
   <reporter-output>
     <line>
-      <![CDATA[OFFER TEST GOT COMPLETED]]>
+      <![CDATA[if - REPORTER - ASSERT TRUE CHECK-->true<br>]]>
     </line>
     <line>
-      <![CDATA[else - REPORTER - ASSERT FALSE CHECK-->false<br>]]>
+      <![CDATA[LOAN CALCULATOR TEST GOT COMPLETED<br>]]>
     </line>
     <line>
-      <![CDATA[<a href='C:\Users\pvenkatarajan\GIT2\PVautomation02\JavaMavenTestNG/screenshots/screenshot_offerTest [23224.0]_SUCCESS.png' target='_blank'>Screenshot</a>]]>
+      <![CDATA[if - REPORTER - ASSERT TRUE CHECK-->true<br>]]>
     </line>
     <line>
-      <![CDATA[Screenshot saved for successful test: offerTest [23224.0] -> C:\Users\pvenkatarajan\GIT2\PVautomation02\JavaMavenTestNG/screenshots/screenshot_offerTest [23224.0]_SUCCESS.png]]>
+      <![CDATA[LOAN CALCULATOR TEST GOT COMPLETED<br>]]>
+    </line>
+    <line>
+      <![CDATA[if - REPORTER - ASSERT TRUE CHECK-->true<br>]]>
+    </line>
+    <line>
+      <![CDATA[LOAN CALCULATOR TEST GOT COMPLETED<br>]]>
+    </line>
+    <line>
+      <![CDATA[if - REPORTER - ASSERT TRUE CHECK-->true<br>]]>
+    </line>
+    <line>
+      <![CDATA[LOAN CALCULATOR TEST GOT COMPLETED<br>]]>
+    </line>
+    <line>
+      <![CDATA[if - REPORTER - ASSERT TRUE CHECK-->true<br>]]>
+    </line>
+    <line>
+      <![CDATA[LOAN CALCULATOR TEST GOT COMPLETED<br>]]>
+    </line>
+    <line>
+      <![CDATA[if - REPORTER - ASSERT TRUE CHECK-->true<br>]]>
+    </line>
+    <line>
+      <![CDATA[LOAN CALCULATOR TEST GOT COMPLETED<br>]]>
+    </line>
+    <line>
+      <![CDATA[if - REPORTER - ASSERT TRUE CHECK-->true<br>]]>
+    </line>
+    <line>
+      <![CDATA[LOAN CALCULATOR TEST GOT COMPLETED<br>]]>
+    </line>
+    <line>
+      <![CDATA[if - REPORTER - ASSERT TRUE CHECK-->true<br>]]>
+    </line>
+    <line>
+      <![CDATA[LOAN CALCULATOR TEST GOT COMPLETED<br>]]>
+    </line>
+    <line>
+      <![CDATA[if - REPORTER - ASSERT TRUE CHECK-->true<br>]]>
+    </line>
+    <line>
+      <![CDATA[LOAN CALCULATOR TEST GOT COMPLETED<br>]]>
+    </line>
+    <line>
+      <![CDATA[if - REPORTER - ASSERT TRUE CHECK-->true<br>]]>
+    </line>
+    <line>
+      <![CDATA[LOAN CALCULATOR TEST GOT COMPLETED<br>]]>
     </line>
   </reporter-output>
-  <suite started-at="2025-01-14T17:11:00 CST" name="Suite" finished-at="2025-01-14T17:14:24 CST" duration-ms="204215">
+  <suite started-at="2025-02-03T13:51:17 CST" name="Default suite" finished-at="2025-02-03T13:59:01 CST" duration-ms="463151">
     <groups>
     </groups>
-    <test started-at="2025-01-14T17:11:00 CST" name="Test" finished-at="2025-01-14T17:14:24 CST" duration-ms="204215">
-      <class name="JavaMavenTestNG.JavaMavenTestNG.OfferTestClass">
-        <test-method is-config="true" signature="setUp(org.testng.ITestContext)[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.OfferTestClass@1e1a0406]" started-at="2025-01-14T17:11:00 CST" name="setUp" finished-at="2025-01-14T17:11:04 CST" duration-ms="3349" status="PASS">
+    <test started-at="2025-02-03T13:51:17 CST" name="Default test" finished-at="2025-02-03T13:59:01 CST" duration-ms="463151">
+      <class name="JavaMavenTestNG.JavaMavenTestNG.LoanCalculatorTestClass">
+        <test-method is-config="true" signature="setUp(org.testng.ITestContext)[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.LoanCalculatorTestClass@36916eb0]" started-at="2025-02-03T13:51:17 CST" name="setUp" finished-at="2025-02-03T13:51:20 CST" duration-ms="2763" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@b606cb6]]>
+                <![CDATA[org.testng.TestRunner@27976390]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="offerTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.OfferTestClass@1e1a0406]" started-at="2025-01-14T17:11:05 CST" name="offerTest" description="Owner: pv_test" data-provider="excelData" finished-at="2025-01-14T17:14:23 CST" duration-ms="198154" status="PASS">
+        <test-method signature="loanCalculatorTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.LoanCalculatorTestClass@36916eb0]" started-at="2025-02-03T13:51:21 CST" name="loanCalculatorTest" description="Owner: pv_test" data-provider="excelData" finished-at="2025-02-03T13:51:56 CST" duration-ms="34941" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[29621.0]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[$2001-$3000]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[36 months]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[500-599 (Fair)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[if - REPORTER - ASSERT TRUE CHECK-->true<br>]]>
+            </line>
+            <line>
+              <![CDATA[LOAN CALCULATOR TEST GOT COMPLETED<br>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- loanCalculatorTest -->
+        <test-method signature="loanCalculatorTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.LoanCalculatorTestClass@36916eb0]" started-at="2025-02-03T13:51:56 CST" name="loanCalculatorTest" description="Owner: pv_test" data-provider="excelData" finished-at="2025-02-03T13:52:28 CST" duration-ms="32187" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[35071.0]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[$2001-$3000]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[30 months]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[500-599 (Fair)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[if - REPORTER - ASSERT TRUE CHECK-->true<br>]]>
+            </line>
+            <line>
+              <![CDATA[LOAN CALCULATOR TEST GOT COMPLETED<br>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- loanCalculatorTest -->
+        <test-method signature="loanCalculatorTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.LoanCalculatorTestClass@36916eb0]" started-at="2025-02-03T13:52:28 CST" name="loanCalculatorTest" description="Owner: pv_test" data-provider="excelData" finished-at="2025-02-03T13:53:01 CST" duration-ms="32328" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[38930.0]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[$2001-$3000]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[24 months]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[500-599 (Fair)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[if - REPORTER - ASSERT TRUE CHECK-->true<br>]]>
+            </line>
+            <line>
+              <![CDATA[LOAN CALCULATOR TEST GOT COMPLETED<br>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- loanCalculatorTest -->
+        <test-method signature="loanCalculatorTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.LoanCalculatorTestClass@36916eb0]" started-at="2025-02-03T13:53:01 CST" name="loanCalculatorTest" description="Owner: pv_test" data-provider="excelData" finished-at="2025-02-03T13:53:33 CST" duration-ms="32104" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[70816.0]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[$2001-$3000]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[36 months]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[600-699 (Good)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[if - REPORTER - ASSERT TRUE CHECK-->true<br>]]>
+            </line>
+            <line>
+              <![CDATA[LOAN CALCULATOR TEST GOT COMPLETED<br>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- loanCalculatorTest -->
+        <test-method signature="loanCalculatorTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.LoanCalculatorTestClass@36916eb0]" started-at="2025-02-03T13:53:33 CST" name="loanCalculatorTest" description="Owner: pv_test" data-provider="excelData" finished-at="2025-02-03T13:54:05 CST" duration-ms="32012" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[30076.0]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[$3001-$4000]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[24 months]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[700+ (Great)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[if - REPORTER - ASSERT TRUE CHECK-->true<br>]]>
+            </line>
+            <line>
+              <![CDATA[LOAN CALCULATOR TEST GOT COMPLETED<br>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- loanCalculatorTest -->
+        <test-method signature="loanCalculatorTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.LoanCalculatorTestClass@36916eb0]" started-at="2025-02-03T13:54:05 CST" name="loanCalculatorTest" description="Owner: pv_test" data-provider="excelData" finished-at="2025-02-03T13:54:37 CST" duration-ms="32490" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[38305.0]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[$2001-$3000]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[24 months]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[600-699 (Good)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[if - REPORTER - ASSERT TRUE CHECK-->true<br>]]>
+            </line>
+            <line>
+              <![CDATA[LOAN CALCULATOR TEST GOT COMPLETED<br>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- loanCalculatorTest -->
+        <test-method signature="loanCalculatorTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.LoanCalculatorTestClass@36916eb0]" started-at="2025-02-03T13:54:37 CST" name="loanCalculatorTest" description="Owner: pv_test" data-provider="excelData" finished-at="2025-02-03T13:55:09 CST" duration-ms="32070" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[42001.0]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[$2001-$3000]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[36 months]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[700+ (Great)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[if - REPORTER - ASSERT TRUE CHECK-->true<br>]]>
+            </line>
+            <line>
+              <![CDATA[LOAN CALCULATOR TEST GOT COMPLETED<br>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- loanCalculatorTest -->
+        <test-method signature="loanCalculatorTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.LoanCalculatorTestClass@36916eb0]" started-at="2025-02-03T13:55:09 CST" name="loanCalculatorTest" description="Owner: pv_test" data-provider="excelData" finished-at="2025-02-03T13:55:42 CST" duration-ms="32096" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[63011.0]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[$2001-$3000]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[30 months]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[700+ (Great)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[if - REPORTER - ASSERT TRUE CHECK-->true<br>]]>
+            </line>
+            <line>
+              <![CDATA[LOAN CALCULATOR TEST GOT COMPLETED<br>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- loanCalculatorTest -->
+        <test-method signature="loanCalculatorTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.LoanCalculatorTestClass@36916eb0]" started-at="2025-02-03T13:55:42 CST" name="loanCalculatorTest" description="Owner: pv_test" data-provider="excelData" finished-at="2025-02-03T13:56:14 CST" duration-ms="32170" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[75287.0]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[$2001-$3000]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[24 months]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[700+ (Great)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[if - REPORTER - ASSERT TRUE CHECK-->true<br>]]>
+            </line>
+            <line>
+              <![CDATA[LOAN CALCULATOR TEST GOT COMPLETED<br>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- loanCalculatorTest -->
+        <test-method signature="loanCalculatorTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.LoanCalculatorTestClass@36916eb0]" started-at="2025-02-03T13:56:14 CST" name="loanCalculatorTest" description="Owner: pv_test" data-provider="excelData" finished-at="2025-02-03T13:56:36 CST" duration-ms="22129" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[27612.0]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[$3001-$4000]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[36 months]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[600-699 (Good)]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.UnsupportedOperationException">
+            <message>
+              <![CDATA[You may not select an option in disabled select]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.UnsupportedOperationException: You may not select an option in disabled select
+at org.openqa.selenium.support.ui.Select.assertSelectIsEnabled(Select.java:327)
+at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:111)
+at JavaMavenTestNG.JavaMavenTestNG.LoanCalculatorTestClass.loanCalculatorTest(LoanCalculatorTestClass.java:81)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.UnsupportedOperationException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loanCalculatorTest -->
+        <test-method signature="loanCalculatorTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.LoanCalculatorTestClass@36916eb0]" started-at="2025-02-03T13:56:36 CST" name="loanCalculatorTest" description="Owner: pv_test" data-provider="excelData" finished-at="2025-02-03T13:56:58 CST" duration-ms="22175" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[47731.0]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[$4001-$5000]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[30 months]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[700+ (Great)]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.UnsupportedOperationException">
+            <message>
+              <![CDATA[You may not select an option in disabled select]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.UnsupportedOperationException: You may not select an option in disabled select
+at org.openqa.selenium.support.ui.Select.assertSelectIsEnabled(Select.java:327)
+at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:111)
+at JavaMavenTestNG.JavaMavenTestNG.LoanCalculatorTestClass.loanCalculatorTest(LoanCalculatorTestClass.java:81)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.UnsupportedOperationException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loanCalculatorTest -->
+        <test-method signature="loanCalculatorTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.LoanCalculatorTestClass@36916eb0]" started-at="2025-02-03T13:56:58 CST" name="loanCalculatorTest" description="Owner: pv_test" data-provider="excelData" finished-at="2025-02-03T13:57:21 CST" duration-ms="22589" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[85296.0]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[$5001-$6000]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[24 months]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[500-599 (Fair)]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.UnsupportedOperationException">
+            <message>
+              <![CDATA[You may not select an option in disabled select]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.UnsupportedOperationException: You may not select an option in disabled select
+at org.openqa.selenium.support.ui.Select.assertSelectIsEnabled(Select.java:327)
+at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:111)
+at JavaMavenTestNG.JavaMavenTestNG.LoanCalculatorTestClass.loanCalculatorTest(LoanCalculatorTestClass.java:81)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.UnsupportedOperationException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loanCalculatorTest -->
+        <test-method signature="loanCalculatorTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.LoanCalculatorTestClass@36916eb0]" started-at="2025-02-03T13:57:21 CST" name="loanCalculatorTest" description="Owner: pv_test" data-provider="excelData" finished-at="2025-02-03T13:57:43 CST" duration-ms="22511" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[53219.0]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[$6001-$7000]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[36 months]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[600-699 (Good)]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.UnsupportedOperationException">
+            <message>
+              <![CDATA[You may not select an option in disabled select]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.UnsupportedOperationException: You may not select an option in disabled select
+at org.openqa.selenium.support.ui.Select.assertSelectIsEnabled(Select.java:327)
+at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:111)
+at JavaMavenTestNG.JavaMavenTestNG.LoanCalculatorTestClass.loanCalculatorTest(LoanCalculatorTestClass.java:81)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.UnsupportedOperationException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loanCalculatorTest -->
+        <test-method signature="loanCalculatorTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.LoanCalculatorTestClass@36916eb0]" started-at="2025-02-03T13:57:43 CST" name="loanCalculatorTest" description="Owner: pv_test" data-provider="excelData" finished-at="2025-02-03T13:58:15 CST" duration-ms="32100" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -39,95 +639,166 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[$2,000]]>
+                <![CDATA[$7001-$8000]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[Appliances]]>
+                <![CDATA[36 months]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[KTOEJT]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[OHPWL]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[street 1]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[6.66021386E8]]>
-              </value>
-            </param>
-            <param index="7">
-              <value>
-                <![CDATA[14-Nov-1999]]>
-              </value>
-            </param>
-            <param index="8">
-              <value>
-                <![CDATA[pvTest.sms.11225001@yopmail.com]]>
-              </value>
-            </param>
-            <param index="9">
-              <value>
-                <![CDATA[(512) 501-0369]]>
-              </value>
-            </param>
-            <param index="10">
-              <value>
-                <![CDATA[myself]]>
-              </value>
-            </param>
-            <param index="11">
-              <value>
-                <![CDATA[0.0]]>
-              </value>
-            </param>
-            <param index="12">
-              <value>
-                <![CDATA[500.0]]>
-              </value>
-            </param>
-            <param index="13">
-              <value>
-                <![CDATA[20000.0]]>
-              </value>
-            </param>
-            <param index="14">
-              <value>
-                <![CDATA[19000.0]]>
+                <![CDATA[700+ (Great)]]>
               </value>
             </param>
           </params>
           <reporter-output>
             <line>
-              <![CDATA[OFFER TEST GOT COMPLETED]]>
+              <![CDATA[if - REPORTER - ASSERT TRUE CHECK-->true<br>]]>
             </line>
             <line>
-              <![CDATA[else - REPORTER - ASSERT FALSE CHECK-->false<br>]]>
-            </line>
-            <line>
-              <![CDATA[<a href='C:\Users\pvenkatarajan\GIT2\PVautomation02\JavaMavenTestNG/screenshots/screenshot_offerTest [23224.0]_SUCCESS.png' target='_blank'>Screenshot</a>]]>
-            </line>
-            <line>
-              <![CDATA[Screenshot saved for successful test: offerTest [23224.0] -> C:\Users\pvenkatarajan\GIT2\PVautomation02\JavaMavenTestNG/screenshots/screenshot_offerTest [23224.0]_SUCCESS.png]]>
+              <![CDATA[LOAN CALCULATOR TEST GOT COMPLETED<br>]]>
             </line>
           </reporter-output>
-        </test-method> <!-- offerTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.OfferTestClass@1e1a0406]" started-at="2025-01-14T17:14:24 CST" name="tearDown" finished-at="2025-01-14T17:14:24 CST" duration-ms="868" status="PASS">
+        </test-method> <!-- loanCalculatorTest -->
+        <test-method signature="loanCalculatorTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.LoanCalculatorTestClass@36916eb0]" started-at="2025-02-03T13:58:15 CST" name="loanCalculatorTest" description="Owner: pv_test" data-provider="excelData" finished-at="2025-02-03T13:58:38 CST" duration-ms="22296" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[32309.0]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[$8001-$9000]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[36 months]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[500-599 (Fair)]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.UnsupportedOperationException">
+            <message>
+              <![CDATA[You may not select an option in disabled select]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.UnsupportedOperationException: You may not select an option in disabled select
+at org.openqa.selenium.support.ui.Select.assertSelectIsEnabled(Select.java:327)
+at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:111)
+at JavaMavenTestNG.JavaMavenTestNG.LoanCalculatorTestClass.loanCalculatorTest(LoanCalculatorTestClass.java:81)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.UnsupportedOperationException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loanCalculatorTest -->
+        <test-method signature="loanCalculatorTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.LoanCalculatorTestClass@36916eb0]" started-at="2025-02-03T13:58:38 CST" name="loanCalculatorTest" description="Owner: pv_test" data-provider="excelData" finished-at="2025-02-03T13:59:00 CST" duration-ms="22181" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[43103.0]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[$9001-$10000]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[36 months]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[600-699 (Good)]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.UnsupportedOperationException">
+            <message>
+              <![CDATA[You may not select an option in disabled select]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.UnsupportedOperationException: You may not select an option in disabled select
+at org.openqa.selenium.support.ui.Select.assertSelectIsEnabled(Select.java:327)
+at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:111)
+at JavaMavenTestNG.JavaMavenTestNG.LoanCalculatorTestClass.loanCalculatorTest(LoanCalculatorTestClass.java:81)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.UnsupportedOperationException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loanCalculatorTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.LoanCalculatorTestClass@36916eb0]" started-at="2025-02-03T13:59:00 CST" name="tearDown" finished-at="2025-02-03T13:59:01 CST" duration-ms="764" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- JavaMavenTestNG.JavaMavenTestNG.OfferTestClass -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+      </class> <!-- JavaMavenTestNG.JavaMavenTestNG.LoanCalculatorTestClass -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

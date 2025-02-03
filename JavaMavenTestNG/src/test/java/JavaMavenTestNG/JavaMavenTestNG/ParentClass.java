@@ -68,13 +68,13 @@ public class ParentClass {
 		// System.setProperty("webdriver.chrome.driver", "");
 		// driver = new ChromeDriver();
 		baseUrl = "https://www.google.com/";
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(120));
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		js = (JavascriptExecutor) driver;
 		a1 = new Actions(driver);
 		// driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
-		wait = new WebDriverWait(driver, Duration.ofSeconds(60));
+		wait = new WebDriverWait(driver, Duration.ofSeconds(120));
 
 	}
 

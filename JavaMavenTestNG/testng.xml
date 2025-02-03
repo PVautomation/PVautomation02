@@ -21,7 +21,7 @@
 <!--
 <class name="JavaMavenTestNG.JavaMavenTestNG.LoanCalculatorTestClass"/>
 
-<class name="JavaMavenTestNG.JavaMavenTestNG.LoanCalculatorTestClass"/>
+<class name="JavaMavenTestNG.JavaMavenTestNG.OfferTestClass"/>
 
 <class name="JavaMavenTestNG.JavaMavenTestNG.ABSimportTestClass"/>
 
@@ -33,7 +33,8 @@
 </class>
 -->
 
-<class name="JavaMavenTestNG.JavaMavenTestNG.OfferTestClass"/>
+<class name="JavaMavenTestNG.JavaMavenTestNG.LoanCalculatorTestClass"/>
+
 
     </classes>
   </test> <!-- Test -->
