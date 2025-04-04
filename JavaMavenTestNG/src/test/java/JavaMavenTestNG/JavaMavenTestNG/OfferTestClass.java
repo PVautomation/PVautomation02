@@ -81,14 +81,28 @@ public class OfferTestClass extends ParentClass {
 	                        String data11, String data12, String data13, String data14, String data15) 
 	          throws Exception {
 
-	      driver.get("https://www-test.republicfinance.com/apps/prequal");
-	      driver.manage().window().maximize();
+		  
+		  WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		 
+		  /*
+		  // CREDIT KARMA FLOW
+		  driver.get("https://www-test.republicfinance.com/lp/creditkarma");
+		  Thread.sleep(10000);
+		 // driver.findElement(By.xpath("//*[@id='form']/div[5]/div/div/div/div[2]/section/div/div/div/div/div[2]/a")).click();
+		  wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='form']/div[5]/div/div/div/div[2]/section/div/div/div/div/div[2]/a"))).click();
+		  */
+		  
+	     // NON CREDIT KARMA FLOW
+		 driver.get("https://www-test.republicfinance.com/apps/prequal");
+	      
+		  Thread.sleep(8000);
+		  driver.manage().window().maximize();
 	      Thread.sleep(15000);
 	 	 js.executeScript("document.body.style.zoom='30%'");
 	 	 js.executeScript("window.scroll(0,0);");
 	 	Thread.sleep(5000);
 	 	
-	      WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+	      
 
 	      try {
 	          WebElement zipCodeField = wait.until(ExpectedConditions.elementToBeClickable(

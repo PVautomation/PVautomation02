@@ -62,23 +62,23 @@
       <![CDATA[LOAN CALCULATOR TEST GOT COMPLETED<br>]]>
     </line>
   </reporter-output>
-  <suite started-at="2025-02-03T13:51:17 CST" name="Default suite" finished-at="2025-02-03T13:59:01 CST" duration-ms="463151">
+  <suite started-at="2025-04-04T10:11:17 CDT" name="Default suite" finished-at="2025-04-04T10:19:00 CDT" duration-ms="463265">
     <groups>
     </groups>
-    <test started-at="2025-02-03T13:51:17 CST" name="Default test" finished-at="2025-02-03T13:59:01 CST" duration-ms="463151">
+    <test started-at="2025-04-04T10:11:17 CDT" name="Default test" finished-at="2025-04-04T10:19:00 CDT" duration-ms="463265">
       <class name="JavaMavenTestNG.JavaMavenTestNG.LoanCalculatorTestClass">
-        <test-method is-config="true" signature="setUp(org.testng.ITestContext)[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.LoanCalculatorTestClass@36916eb0]" started-at="2025-02-03T13:51:17 CST" name="setUp" finished-at="2025-02-03T13:51:20 CST" duration-ms="2763" status="PASS">
+        <test-method is-config="true" signature="setUp(org.testng.ITestContext)[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.LoanCalculatorTestClass@36916eb0]" started-at="2025-04-04T10:11:17 CDT" name="setUp" finished-at="2025-04-04T10:11:20 CDT" duration-ms="2815" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@27976390]]>
+                <![CDATA[org.testng.TestRunner@9df564f]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="loanCalculatorTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.LoanCalculatorTestClass@36916eb0]" started-at="2025-02-03T13:51:21 CST" name="loanCalculatorTest" description="Owner: pv_test" data-provider="excelData" finished-at="2025-02-03T13:51:56 CST" duration-ms="34941" status="PASS">
+        <test-method signature="loanCalculatorTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.LoanCalculatorTestClass@36916eb0]" started-at="2025-04-04T10:11:22 CDT" name="loanCalculatorTest" description="Owner: pv_test" data-provider="excelData" finished-at="2025-04-04T10:11:58 CDT" duration-ms="35609" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -110,7 +110,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- loanCalculatorTest -->
-        <test-method signature="loanCalculatorTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.LoanCalculatorTestClass@36916eb0]" started-at="2025-02-03T13:51:56 CST" name="loanCalculatorTest" description="Owner: pv_test" data-provider="excelData" finished-at="2025-02-03T13:52:28 CST" duration-ms="32187" status="PASS">
+        <test-method signature="loanCalculatorTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.LoanCalculatorTestClass@36916eb0]" started-at="2025-04-04T10:11:58 CDT" name="loanCalculatorTest" description="Owner: pv_test" data-provider="excelData" finished-at="2025-04-04T10:12:30 CDT" duration-ms="32655" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -142,7 +142,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- loanCalculatorTest -->
-        <test-method signature="loanCalculatorTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.LoanCalculatorTestClass@36916eb0]" started-at="2025-02-03T13:52:28 CST" name="loanCalculatorTest" description="Owner: pv_test" data-provider="excelData" finished-at="2025-02-03T13:53:01 CST" duration-ms="32328" status="PASS">
+        <test-method signature="loanCalculatorTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.LoanCalculatorTestClass@36916eb0]" started-at="2025-04-04T10:12:30 CDT" name="loanCalculatorTest" description="Owner: pv_test" data-provider="excelData" finished-at="2025-04-04T10:13:03 CDT" duration-ms="32094" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -174,7 +174,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- loanCalculatorTest -->
-        <test-method signature="loanCalculatorTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.LoanCalculatorTestClass@36916eb0]" started-at="2025-02-03T13:53:01 CST" name="loanCalculatorTest" description="Owner: pv_test" data-provider="excelData" finished-at="2025-02-03T13:53:33 CST" duration-ms="32104" status="PASS">
+        <test-method signature="loanCalculatorTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.LoanCalculatorTestClass@36916eb0]" started-at="2025-04-04T10:13:03 CDT" name="loanCalculatorTest" description="Owner: pv_test" data-provider="excelData" finished-at="2025-04-04T10:13:35 CDT" duration-ms="32223" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -206,7 +206,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- loanCalculatorTest -->
-        <test-method signature="loanCalculatorTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.LoanCalculatorTestClass@36916eb0]" started-at="2025-02-03T13:53:33 CST" name="loanCalculatorTest" description="Owner: pv_test" data-provider="excelData" finished-at="2025-02-03T13:54:05 CST" duration-ms="32012" status="PASS">
+        <test-method signature="loanCalculatorTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.LoanCalculatorTestClass@36916eb0]" started-at="2025-04-04T10:13:35 CDT" name="loanCalculatorTest" description="Owner: pv_test" data-provider="excelData" finished-at="2025-04-04T10:14:07 CDT" duration-ms="31997" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -238,7 +238,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- loanCalculatorTest -->
-        <test-method signature="loanCalculatorTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.LoanCalculatorTestClass@36916eb0]" started-at="2025-02-03T13:54:05 CST" name="loanCalculatorTest" description="Owner: pv_test" data-provider="excelData" finished-at="2025-02-03T13:54:37 CST" duration-ms="32490" status="PASS">
+        <test-method signature="loanCalculatorTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.LoanCalculatorTestClass@36916eb0]" started-at="2025-04-04T10:14:07 CDT" name="loanCalculatorTest" description="Owner: pv_test" data-provider="excelData" finished-at="2025-04-04T10:14:39 CDT" duration-ms="31938" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -270,7 +270,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- loanCalculatorTest -->
-        <test-method signature="loanCalculatorTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.LoanCalculatorTestClass@36916eb0]" started-at="2025-02-03T13:54:37 CST" name="loanCalculatorTest" description="Owner: pv_test" data-provider="excelData" finished-at="2025-02-03T13:55:09 CST" duration-ms="32070" status="PASS">
+        <test-method signature="loanCalculatorTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.LoanCalculatorTestClass@36916eb0]" started-at="2025-04-04T10:14:39 CDT" name="loanCalculatorTest" description="Owner: pv_test" data-provider="excelData" finished-at="2025-04-04T10:15:11 CDT" duration-ms="31851" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -302,7 +302,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- loanCalculatorTest -->
-        <test-method signature="loanCalculatorTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.LoanCalculatorTestClass@36916eb0]" started-at="2025-02-03T13:55:09 CST" name="loanCalculatorTest" description="Owner: pv_test" data-provider="excelData" finished-at="2025-02-03T13:55:42 CST" duration-ms="32096" status="PASS">
+        <test-method signature="loanCalculatorTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.LoanCalculatorTestClass@36916eb0]" started-at="2025-04-04T10:15:11 CDT" name="loanCalculatorTest" description="Owner: pv_test" data-provider="excelData" finished-at="2025-04-04T10:15:43 CDT" duration-ms="31971" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -334,7 +334,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- loanCalculatorTest -->
-        <test-method signature="loanCalculatorTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.LoanCalculatorTestClass@36916eb0]" started-at="2025-02-03T13:55:42 CST" name="loanCalculatorTest" description="Owner: pv_test" data-provider="excelData" finished-at="2025-02-03T13:56:14 CST" duration-ms="32170" status="PASS">
+        <test-method signature="loanCalculatorTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.LoanCalculatorTestClass@36916eb0]" started-at="2025-04-04T10:15:43 CDT" name="loanCalculatorTest" description="Owner: pv_test" data-provider="excelData" finished-at="2025-04-04T10:16:14 CDT" duration-ms="31836" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -366,7 +366,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- loanCalculatorTest -->
-        <test-method signature="loanCalculatorTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.LoanCalculatorTestClass@36916eb0]" started-at="2025-02-03T13:56:14 CST" name="loanCalculatorTest" description="Owner: pv_test" data-provider="excelData" finished-at="2025-02-03T13:56:36 CST" duration-ms="22129" status="FAIL">
+        <test-method signature="loanCalculatorTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.LoanCalculatorTestClass@36916eb0]" started-at="2025-04-04T10:16:14 CDT" name="loanCalculatorTest" description="Owner: pv_test" data-provider="excelData" finished-at="2025-04-04T10:16:37 CDT" duration-ms="22204" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -432,7 +432,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loanCalculatorTest -->
-        <test-method signature="loanCalculatorTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.LoanCalculatorTestClass@36916eb0]" started-at="2025-02-03T13:56:36 CST" name="loanCalculatorTest" description="Owner: pv_test" data-provider="excelData" finished-at="2025-02-03T13:56:58 CST" duration-ms="22175" status="FAIL">
+        <test-method signature="loanCalculatorTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.LoanCalculatorTestClass@36916eb0]" started-at="2025-04-04T10:16:37 CDT" name="loanCalculatorTest" description="Owner: pv_test" data-provider="excelData" finished-at="2025-04-04T10:16:59 CDT" duration-ms="22766" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -498,7 +498,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loanCalculatorTest -->
-        <test-method signature="loanCalculatorTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.LoanCalculatorTestClass@36916eb0]" started-at="2025-02-03T13:56:58 CST" name="loanCalculatorTest" description="Owner: pv_test" data-provider="excelData" finished-at="2025-02-03T13:57:21 CST" duration-ms="22589" status="FAIL">
+        <test-method signature="loanCalculatorTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.LoanCalculatorTestClass@36916eb0]" started-at="2025-04-04T10:16:59 CDT" name="loanCalculatorTest" description="Owner: pv_test" data-provider="excelData" finished-at="2025-04-04T10:17:21 CDT" duration-ms="22091" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -564,7 +564,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loanCalculatorTest -->
-        <test-method signature="loanCalculatorTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.LoanCalculatorTestClass@36916eb0]" started-at="2025-02-03T13:57:21 CST" name="loanCalculatorTest" description="Owner: pv_test" data-provider="excelData" finished-at="2025-02-03T13:57:43 CST" duration-ms="22511" status="FAIL">
+        <test-method signature="loanCalculatorTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.LoanCalculatorTestClass@36916eb0]" started-at="2025-04-04T10:17:21 CDT" name="loanCalculatorTest" description="Owner: pv_test" data-provider="excelData" finished-at="2025-04-04T10:17:43 CDT" duration-ms="21995" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -630,7 +630,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loanCalculatorTest -->
-        <test-method signature="loanCalculatorTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.LoanCalculatorTestClass@36916eb0]" started-at="2025-02-03T13:57:43 CST" name="loanCalculatorTest" description="Owner: pv_test" data-provider="excelData" finished-at="2025-02-03T13:58:15 CST" duration-ms="32100" status="PASS">
+        <test-method signature="loanCalculatorTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.LoanCalculatorTestClass@36916eb0]" started-at="2025-04-04T10:17:43 CDT" name="loanCalculatorTest" description="Owner: pv_test" data-provider="excelData" finished-at="2025-04-04T10:18:15 CDT" duration-ms="31961" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -662,7 +662,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </line>
           </reporter-output>
         </test-method> <!-- loanCalculatorTest -->
-        <test-method signature="loanCalculatorTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.LoanCalculatorTestClass@36916eb0]" started-at="2025-02-03T13:58:15 CST" name="loanCalculatorTest" description="Owner: pv_test" data-provider="excelData" finished-at="2025-02-03T13:58:38 CST" duration-ms="22296" status="FAIL">
+        <test-method signature="loanCalculatorTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.LoanCalculatorTestClass@36916eb0]" started-at="2025-04-04T10:18:15 CDT" name="loanCalculatorTest" description="Owner: pv_test" data-provider="excelData" finished-at="2025-04-04T10:18:37 CDT" duration-ms="21948" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -728,7 +728,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loanCalculatorTest -->
-        <test-method signature="loanCalculatorTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.LoanCalculatorTestClass@36916eb0]" started-at="2025-02-03T13:58:38 CST" name="loanCalculatorTest" description="Owner: pv_test" data-provider="excelData" finished-at="2025-02-03T13:59:00 CST" duration-ms="22181" status="FAIL">
+        <test-method signature="loanCalculatorTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.LoanCalculatorTestClass@36916eb0]" started-at="2025-04-04T10:18:37 CDT" name="loanCalculatorTest" description="Owner: pv_test" data-provider="excelData" finished-at="2025-04-04T10:18:59 CDT" duration-ms="21999" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -794,7 +794,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loanCalculatorTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.LoanCalculatorTestClass@36916eb0]" started-at="2025-02-03T13:59:00 CST" name="tearDown" finished-at="2025-02-03T13:59:01 CST" duration-ms="764" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:JavaMavenTestNG.JavaMavenTestNG.LoanCalculatorTestClass@36916eb0]" started-at="2025-04-04T10:18:59 CDT" name="tearDown" finished-at="2025-04-04T10:19:00 CDT" duration-ms="743" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
